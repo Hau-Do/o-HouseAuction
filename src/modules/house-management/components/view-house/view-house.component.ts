@@ -1,4 +1,12 @@
+// Angular framework
 import { Component } from '@angular/core';
+
+// Services
+import { ViewHouseService } from './view-house.service';
+import { viewClassName } from '@angular/compiler';
+
+// Components
+
 
 @Component({
   selector: 'view-house-component',
@@ -7,5 +15,11 @@ import { Component } from '@angular/core';
 })
 
 export class ViewHouseComponent {
+
+  constructor(
+    private viewHouseService : ViewHouseService,
+  ) {
+
+  } 
   
 }
