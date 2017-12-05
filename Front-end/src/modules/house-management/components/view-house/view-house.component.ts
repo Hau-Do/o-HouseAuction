@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 
 // Services
-import { ViewHouseService } from './view-house.service';
 import { viewClassName } from '@angular/compiler';
 
 // Components
@@ -17,7 +16,7 @@ import { viewClassName } from '@angular/compiler';
 export class ViewHouseComponent {
 
   constructor(
-    private viewHouseService : ViewHouseService,
+    
   ) {
 
   } 
