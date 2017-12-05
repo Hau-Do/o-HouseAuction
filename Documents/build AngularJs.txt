@@ -1,0 +1,12 @@
+- download and install npm included NodeJS
+	https://nodejs.org/en/download/
+- after installing, open cmd, check version by typing
+	node --version 
+	npm --version
+- install Angular CLI
+	npm install -g @angular/cli
+- create new Angular app follow CLI standard
+	ng new my-app
+- start webserver with http://localhost:4200 (default)
+	cd my-app
+	ng serve
