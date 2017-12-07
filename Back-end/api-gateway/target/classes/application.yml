@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://localhost:9090
+    
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      
+zuul:
+  routes:
+    account:
+#      url: http://localhost:1111
+      service-id: account-service
+    house:
+#      url: http://localhost:2222
+      service-id: house-service
