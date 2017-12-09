@@ -1,10 +1,4 @@
-// Angular framework
 import { Component } from '@angular/core';
-
-// Services
-import { viewClassName } from '@angular/compiler';
-
-// Components
 
 @Component({
   selector: 'view-house-component',
@@ -13,11 +7,5 @@ import { viewClassName } from '@angular/compiler';
 })
 
 export class ViewHouseComponent {
-
-  constructor(
-    
-  ) {
-
-  } 
   
 }
