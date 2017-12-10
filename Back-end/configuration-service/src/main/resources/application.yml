@@ -1,0 +1,13 @@
+server:
+  port: 9090
+  
+security:
+  basic:
+    enabled: false
+    
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: 
