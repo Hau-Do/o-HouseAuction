@@ -5,17 +5,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { houseManagementRoutes } from './house-management.routes';
 
 import { ViewHouseComponent } from './components/view-house/view-house.component';
-
+import { PostHouseComponent } from './components/post-house/post-house.component';
+import { HouseManagementComponent } from './house-management.component';
+import { PageNotFoundComponent } from './not-found.component';
 
 @NgModule({
-  declarations: [
-    ViewHouseComponent
-  ],
   imports: [
-    RouterModule.forRoot(houseManagementRoutes),
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      houseManagementRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
-  providers: [],
-  bootstrap: [ViewHouseComponent]
+  declarations: [
+    HouseManagementComponent,
+    ViewHouseComponent,
+    PostHouseComponent,
+    PageNotFoundComponent
+  ],
+  bootstrap: [ HouseManagementComponent ]
 })
 export class HouseManagementModule { }
