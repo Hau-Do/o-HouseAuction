@@ -4,8 +4,13 @@ server:
 spring:
   application:
     name: account-service
+  profiles:
+    active: application
+  cloud:
+    config:
+      uri: http://location:9090
     
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/

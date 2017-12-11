@@ -1,3 +1,21 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
-
+account-service/.classpath
+account-service/.project
+account-service/.settings
+account-service/target
+api-gateway/.classpath
+api-gateway/.project
+api-gateway/.settings
+api-gateway/target
+configuration-service/.classpath
+configuration-service/.project
+configuration-service/.settings
+configuration-service/target
+discovery-service/.classpath
+discovery-service/.project
+discovery-service/.settings
+discovery-service/target
+house-service/.classpath
+house-service/.project
+house-service/.settings
+house-service/target
