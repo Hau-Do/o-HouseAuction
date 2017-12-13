@@ -8,7 +8,7 @@ export const houseManagementRoutes: Routes = [
     { path: 'view-house', component: ViewHouseComponent },
     { path: 'post-house', component: PostHouseComponent },
    
-    { path: '',   redirectTo: '/view-house', pathMatch: 'full' },
-    { path: '**', component: PageNotFoundComponent }
+    // { path: '',   redirectTo: '/view-house', pathMatch: 'full' }
+    // { path: '**', component: PageNotFoundComponent }
 
 ];
