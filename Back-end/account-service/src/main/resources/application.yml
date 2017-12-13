@@ -4,11 +4,7 @@ server:
 spring:
   application:
     name: account-service
-  profiles:
-    active: application
-  cloud:
-    config:
-      uri: http://location:9090
+      
     
 #eureka:
 #  client:

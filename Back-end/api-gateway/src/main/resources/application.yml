@@ -4,11 +4,6 @@ server:
 spring:
   application:
     name: api-gateway
-  profiles:
-    active: application
-  cloud:
-    config:
-      uri: http://location:9090
       
 #eureka:
 #  client:
@@ -17,9 +12,33 @@ spring:
       
 zuul:
   routes:
+    auth:
+      path: /auth/**
+      url: http://localhost:9999/authentication-service/
+      sensitive-headers:
     account:
 #      url: http://localhost:1111
       service-id: account-service
     house:
 #      url: http://localhost:2222
       service-id: house-service
+      
+#security:
+#  user:
+#    password: none
+#  oauth2:
+#    client:
+#      access-token-uri: http://localhost:8081/web-app/auth/oauth/token
+#      user-authorization-uri: http://localhost:8081/web-app/auth/oauth/authorize
+#      client-id: web-app
+#      pre-established-redirect-uri: http://localhost:8081/web-app/login
+#      registered-redirect-uri: http://localhost:8081/web-app/login
+#      use-current-uri: false
+#      
+#    resource:
+#      jwt:
+#        key-value:
+        
+        
+        
+        
