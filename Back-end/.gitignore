@@ -19,3 +19,10 @@ house-service/.classpath
 house-service/.project
 house-service/.settings
 house-service/target
+authentication-service/.classpath
+authentication-service/.project
+authentication-service/.settings
+authentication-service/target
+authentication-service/mvnw
+authentication-service/mvnw.cmd
+authentication-service/.mvn
