@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutsModule } from '../../layouts/layouts.module';
 
 import { houseManagementRoutes } from './house-management.routes';
 
 import { ViewHouseComponent } from './components/view-house/view-house.component';
 import { PostHouseComponent } from './components/post-house/post-house.component';
 import { HouseManagementComponent } from './house-management.component';
-import { PageNotFoundComponent } from './not-found.component';
+// import { NavBarComponent } from '../../layouts/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { PageNotFoundComponent } from './not-found.component';
     RouterModule.forRoot(
       houseManagementRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    LayoutsModule
   ],
   declarations: [
+    //NavBarComponent,
     HouseManagementComponent,
     ViewHouseComponent,
-    PostHouseComponent,
-    PageNotFoundComponent
+    PostHouseComponent
+    
   ],
   bootstrap: [ HouseManagementComponent ]
 })

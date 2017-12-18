@@ -12,4 +12,4 @@ import { RouterModule, Routes } from '@angular/router';
   providers: [],
   bootstrap: []
 })
-export class HouseManagementModule { }
+export class ViewHouseManagementModule { }
