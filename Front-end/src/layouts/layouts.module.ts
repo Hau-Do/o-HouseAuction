@@ -7,10 +7,10 @@ import { layoutsRoutes } from './layouts.routes';
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(
-            layoutsRoutes,
-            { enableTracing: true }
-        )
+        // RouterModule.forRoot(
+        //     layoutsRoutes,
+        //     { enableTracing: true }
+        // )
     ],
     declarations: [
         // NavBarComponent

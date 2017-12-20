@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
     selector: 'navbar-component',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['./navbar.component.css']
 })
 
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
     
+    constructor() {
+
+    }
+
+    ngOnInit() {
+
+    }
 }
