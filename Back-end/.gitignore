@@ -42,3 +42,12 @@ bidhouse-common/.classpath
 bidhouse-common/.project
 bidhouse-common/.springBeans
 
+ethereum-service/target
+ethereum-service/.mvn
+ethereum-service/.settings
+ethereum-service/mvnw
+ethereum-service/mvnw.cmd
+ethereum-service/.classpath
+ethereum-service/.project
+ethereum-service/.springBeans
+
