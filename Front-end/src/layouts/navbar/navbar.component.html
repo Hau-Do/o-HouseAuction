@@ -1,5 +1,15 @@
 <nav>
-    <a routerLink="/view-house" routerLinkActive="active">View House</a>
-    <a routerLink="/post-house" routerLinkActive="active">Post House</a>
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">o-HouseAuction</a> 
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a [routerLink]="['/']">House Management</a>
+            </li>
+            <li>
+                <a [routerLink]="['/account']">Account Management</a>
+            </li>
+        </ul>
+    </div>
 </nav>
-<router-outlet></router-outlet>
