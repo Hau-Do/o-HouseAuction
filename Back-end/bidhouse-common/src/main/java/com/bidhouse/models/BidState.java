@@ -1,7 +1,6 @@
 package com.bidhouse.models;
 
 import java.util.Date;
-import java.util.List;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -19,20 +18,13 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "houses")
-public class House {
+@Document(collection = "bid_states")
+public class BidState {
 	@Id
 	private ObjectId id;
-	private String address;
-	private ObjectId owner;
-	private double area;
-	private double startPrice;
-	private double endPrice;
-	private boolean sessionEnd;
-	private Date createdDate;
-	private Date endDate;
-	@DBRef(db = "bid_states")
+	private Date bidTime;
+	@DBRef(db = "users")
 	@CascadeSave
-	private List<BidState> bidStates;
-	
+	private ObjectId user;
+	private double biddingPrice;
 }

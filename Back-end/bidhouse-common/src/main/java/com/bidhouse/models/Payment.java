@@ -1,14 +1,11 @@
 package com.bidhouse.models;
 
 import java.util.Date;
-import java.util.List;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.bidhouse.annotation.CascadeSave;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,20 +16,13 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "houses")
-public class House {
+@Document(collection = "payments")
+public class Payment {
 	@Id
 	private ObjectId id;
-	private String address;
-	private ObjectId owner;
-	private double area;
-	private double startPrice;
-	private double endPrice;
-	private boolean sessionEnd;
-	private Date createdDate;
-	private Date endDate;
-	@DBRef(db = "bid_states")
-	@CascadeSave
-	private List<BidState> bidStates;
-	
+	@DBRef(db = "users")
+	private User userId;
+	@DBRef(db = "houses")
+	private House houseId;
+	private Date payTime;
 }
