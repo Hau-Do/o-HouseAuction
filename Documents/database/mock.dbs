@@ -2,15 +2,19 @@
 <project name="MongoDb" id="Project_136509" template="Default" database="MongoDb" >
 	<schema name="admin" catalogname="admin" >
 		<table name="Table" />
+		<table name="account" >
+			<column name="accountId" type="string" jt="12" />
+			<column name="userName" type="string" jt="12" />
+			<column name="pwd" type="string" jt="12" />
+			<column name="role" type="string" jt="12" />
+		</table>
 		<table name="bidState" >
+			<column name="bidStateId" type="string" jt="12" />
 			<column name="bidTime" type="date" jt="91" />
 			<column name="clientId" type="string" jt="12" />
-			<column name="houseId" type="integer" jt="4" />
+			<column name="biddingPrice" type="double" jt="8" />
 			<fk name="Fk_bidState_client" virtual="y" to_schema="admin" to_table="client" >
 				<fk_column name="clientId" pk="clientId" />
-			</fk>
-			<fk name="Fk_bidState_house" virtual="y" to_schema="admin" to_table="house" >
-				<fk_column name="houseId" pk="houseId" />
 			</fk>
 		</table>
 		<table name="client" >
@@ -18,16 +22,24 @@
 			<column name="fullName" type="string" jt="12" />
 			<column name="address" type="string" jt="12" />
 			<column name="isRegistered" type="boolean" jt="16" />
-			<column name="userName" type="string" jt="12" />
-			<column name="pwd" type="string" jt="12" />
 			<column name="ethereumAccountAddress" type="string" jt="12" />
+			<column name="accountId" type="string" jt="12" />
+			<fk name="Fk_client_account" virtual="y" to_schema="admin" to_table="account" >
+				<fk_column name="accountId" pk="accountId" />
+			</fk>
 		</table>
 		<table name="house" >
 			<column name="houseId" type="string" jt="12" mandatory="y" />
 			<column name="address" type="string" jt="12" />
+			<column name="ownerId" type="string" jt="12" />
 			<column name="area" type="double" jt="8" />
 			<column name="startPrice" type="double" jt="8" />
-			<column name="currentPrice" type="double" jt="8" />
+			<column name="endPrice" type="double" jt="8" />
+			<column name="isSessonEnd" type="boolean" jt="16" />
+			<column name="lstBidStateId" type="list" jt="4999545" />
+			<fk name="Fk_house_client" virtual="y" to_schema="admin" to_table="client" >
+				<fk_column name="ownerId" pk="clientId" />
+			</fk>
 		</table>
 		<table name="payment" >
 			<column name="paymentId" type="string" jt="12" mandatory="y" />
@@ -45,9 +57,10 @@
 	<connector name="MongoDb" database="MongoDb" driver_class="com.dbschema.MongoJdbcDriver" driver_jar="mongojdbc1.2.jar" driver_desc="No Authentication &lt;/span&gt;&lt;br&gt;&lt;b&gt;Connect using MongoDb URI using the Advanced tab/enforce custom URI. Details in Help.&lt;br&gt;Connectivity logs are available in Help / Output Log.&lt;/b&gt;" host="localhost" port="27017" instance="admin" />
 	<layout name="Layout" id="Layout_40fee53" show_relation="columns" >
 		<comment><![CDATA[Layout]]></comment>
-		<entity schema="admin" name="client" color="1f5182" x="45" y="135" />
-		<entity schema="admin" name="bidState" color="1f5182" x="345" y="45" />
-		<entity schema="admin" name="payment" color="1f5182" x="330" y="225" />
-		<entity schema="admin" name="house" color="1f5182" x="495" y="135" />
+		<entity schema="admin" name="bidState" color="1f5182" x="345" y="75" />
+		<entity schema="admin" name="house" color="1f5182" x="120" y="45" />
+		<entity schema="admin" name="client" color="1f5182" x="225" y="300" />
+		<entity schema="admin" name="account" color="c1d8ee" x="480" y="330" />
+		<entity schema="admin" name="payment" color="1f5182" x="45" y="330" />
 	</layout>
 </project>
