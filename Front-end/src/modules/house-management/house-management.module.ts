@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutsModule } from '../../layouts/layouts.module';
+import { SnippetsModule } from '../../snippets/snippets.module';
 
 // import { houseManagementRoutes } from './house-management.routes';
 import { houseManagementRouter } from './house-management.routes';

@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { layoutsRoutes } from './layouts.routes';
+import { snippetsRoutes } from './snippets.routes';
 
 // import { NavBarComponent } from './navbar/navbar.component';
 
@@ -17,4 +17,4 @@ import { layoutsRoutes } from './layouts.routes';
     ]
 })
 
-export class LayoutsModule {}
+export class SnippetsModule {}

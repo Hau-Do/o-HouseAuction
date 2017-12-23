@@ -1,0 +1,23 @@
+#footer {
+    padding: 15px 0;
+    font-size: 12px;
+    color: #999;
+}
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#footer .left {
+    float: left;
+}
+#footer p {
+    line-height: normal;
+}
+#footer .right {
+    float: right;
+    text-align: right;
+}

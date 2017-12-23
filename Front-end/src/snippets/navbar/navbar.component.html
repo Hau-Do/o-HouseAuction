@@ -1,0 +1,117 @@
+<!-- <nav class="navbar navbar-default   ">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">o-HouseAuction</a> 
+        </div>
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/']">House Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/account']">Account Management</a>
+            </li>
+            <li ngbDropdown class="nav-item dropdown pointer">
+                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
+                    <span>
+                        <span>Peter.Do</span>
+                        <b class="caret"></b>
+                    </span>
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li>
+                        <a class="dropdown-item">
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">
+                            <span>My Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">
+                            <span>Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+<div id="header" class="">           
+	<div class="wrapper" id="wrapper"> 
+		<div id="mobileMenu" class="mobile-menu">
+			
+			<img id="imgPrimary_select" class="mobile-icon" src="/gfx/Icons-Chilindo-END-mobile.png">
+			<a class="mobile-menu-close"></a>
+		</div>
+		<div id="logo">
+			<a href="/">
+				Chilindo
+			</a>
+		</div>
+		<div id="users">
+			
+			<div class="user-nav-bar">
+				<img src="/gfx/all-menu.png" alt="All menu">
+				 <span id="uPanelCartItemCountSmall">
+				
+					 </span>
+				<div class="user-nav-bar-close"></div>
+			</div>
+			<ul class="user_nav" id="user_nav">
+				<li>     
+								   
+						<a href="/MyCart.aspx" id="cart_button" class="cart_button">
+					My Cart
+							 <span id="uPanelCartItemCount">     
+					
+					  </span> 
+				   </a>         
+										   
+						</li>
+				<li><a href="/myauctions.aspx" class="my_auction_link">
+					My Auctions</a></li>
+				<li id="lang_selection">
+					<a href="javascript://" id="lang_button" class="lang_button_en lang_button">
+						<span id="lit77">Ngôn ngữ</span>
+						<b class="lang-button-close"></b>
+					</a>
+					<ul id="languages" class="en_current sub-menu">
+						<li>
+							<a id="repLanguages_lnkLang_0" class="lnkLang_vi" ident="vi" flagpath="/gfx/flags/vn.png" txtid="1352" href="javascript:__doPostBack('ctl00$repLanguages$ctl00$lnkLang','')" style="font-weight:normal;">Vietnamese<img src="/gfx/flags/vn.png" alt="ico" class="flag_icon"></a></li>  
+					
+						<li>
+							<a id="repLanguages_lnkLang_1" class="lnkLang_en" ident="en" flagpath="/gfx/flags/en.png" txtid="1348" href="javascript:__doPostBack('ctl00$repLanguages$ctl01$lnkLang','')" style="font-weight:bold;">English<img src="/gfx/flags/en.png" alt="ico" class="flag_icon"></a></li>  
+					
+					</ul>
+				</li>
+				<li id="liUserSignIn">        
+                    <div id="register">
+                        <a href="/login"id="popsignin" class="sign_in" style="cursor: pointer" data-toggle="modal" data-target="#SignUpData"> 
+                            Sign In
+                        </a>
+                    </div>
+                </li>
+											
+				<li id="liUserProfile">
+					<a href="#user_profile" id="show_user_profile">
+						Welcome vinh.nguyễn.747554</a>
+					<ul id="user_profile" class="submenu">
+						<li><a href="/MyProfile.aspx">
+							My Profile</a></li>
+						<li><a href="/MyOrders.aspx" class="my_order_link">
+							My Orders</a></li>
+						<li>
+							<a id="lnkLogOut" class="log_out" href="javascript:__doPostBack('ctl00$lnkLogOut','')">Log Out</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<input type="hidden" name="ctl00$hdnDomain" id="hdnDomain">
+			<input type="hidden" name="ctl00$hdnCurrency" id="hdnCurrency">
+			<input type="hidden" name="ctl00$hdnLanguage" id="hdnLanguage"> 
+			<input type="hidden" name="ctl00$hdnChilindoAppUser" id="hdnChilindoAppUser" value="vinhnguyen220195@yahoo.com#vi">          
+		</div>
+	</div>
+</div>
