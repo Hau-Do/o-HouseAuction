@@ -1,0 +1,305 @@
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#feed_list .left_col {
+    width: 700px;
+    float: left;
+}
+.go-back {
+    padding: 0 5px 10px;
+}
+.go-back a {
+    font-size: 15px;
+    text-decoration: none;
+}
+.go-back img {
+    margin: 0 5px 1px;
+}
+.extended_view {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: block;
+    border: solid 1px #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.product_title {
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+    border-bottom: solid 1px #ccc;
+}
+.product_title a {
+    color: #333;
+}
+.product_photo_wrp {
+    margin-left: 10px;
+    float: left;
+    width: 260px;
+}
+.product_photo {
+    display: inline-block;
+}
+.zoomWrapper {
+    float: left;
+    position: relative;
+    width: 100%!important;
+}
+.product_gallery {
+    display: inline-block;
+    margin: 5px -5px;
+    width: 100%;
+}
+.single_product .product_thumb {
+    max-width: 72px;
+    max-height: 97px;
+    overflow: hidden;
+    border: solid 1px #ccc;
+}
+.product_thumb {
+    max-width: 250px;
+    float: left;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+.single_product .product_thumb img {
+    width: 103%;
+}
+.product_thumb img {
+    display: block;
+    margin: -1px 0 0 -1px;
+}
+.product_info {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 10px;
+    width: 420px;
+}
+.product_info .left {
+    width: 45%;
+    float: left;
+}
+.product_info .left, .product_info .right {
+    padding-bottom: 10px;
+}
+.info_field {
+    font-family: 'Quark';
+    font-size: 16px;
+}
+.info_field {
+    color: #999;
+}
+.current_bid, .timeout {
+    min-height: 40px;
+    padding: 5px 0;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.product_title .feed, .go-back-mobile, .info-product-right .current-winner>img {
+    display: none;
+}
+.service_condition {
+    display: inline-block;
+    margin-top: -12px;
+    padding: 0 10px;
+    position: relative;
+    text-align: right;
+    top: -11px;
+    width: 100%;
+}
+.return_condition, .shipping_condition, .payment_condition {
+    display: inline-block;
+    margin-left: 20px;
+}
+.service_condition a {
+    text-decoration: none;
+}
+.service_condition label {
+    display: inline-block;
+}
+#languages, #cart, #user_profile, #view_return_condition, #view_shipping_condition, #view_payment_condition, #view_faq {
+    display: none;
+}
+#view_return_condition, #view_shipping_condition, #view_payment_condition {
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 17px;
+    padding: 10px;
+    text-align: left;
+}
+#view_history:before {
+    width: 100%;
+    display: block;
+    content: '';
+    clear: both;
+}
+.bidding_history {
+    width: auto;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bidding_history li.history_heading {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.history_heading span {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .bidding_history li.history_heading{font-size:14px;font-weight:bold;background-color:#eee;}
+  .bidding_history li.odd{background-color:#fff;}
+  .bidding_history li.even{background-color:#f6f6f6;}
+  .bidding_history li.history_heading span{font-size:13px;line-height:20px;padding-bottom:10px;padding-top:10px;}
+  .bidding_history li span{display:inline-block;line-height:40px;float:left;}
+  .bidding_history li span span{float:none;}
+  
+  .bidding_history li span {
+    display: inline-block;
+    line-height: 40px;
+    float: left;
+}
+
+.bid_user {
+    width: 30%;
+    padding-left: 30px;
+}
+.bidding_history li span {
+    display: inline-block;
+    line-height: 40px;
+    float: left;
+}
+
+.bid_amount, .bid_total, .bid_time {
+    text-align: center;
+}
+.bid_amount {
+    width: 20%;
+}
+.bid_total {
+    width: 20%;
+}
+.bid_time {
+    width: 30%;
+}
+ol, ul {
+    list-style: none;
+}
+.bidding_history li.history_heading {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.bidding_history li {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+}
+.product_details {
+    float: left;
+    padding: 10px 0 20px;
+    line-height: 24px;
+    width: 100%;
+}
+#show_history:hover {
+    color: #fff;
+    background-color: #1ab7ea;
+    border-color: #1ab7ea;
+}
+
+#show_history {
+    float: right;
+}
+#show_history {
+    margin-right: 10px;
+    padding: 8px 20px;
+    position: relative;
+    overflow: hidden;
+    color: #1ab7ea;
+    background-color: #eee;
+    text-decoration: none;
+    border: solid 1px #ccc;
+    z-index: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+a:hover {
+    color: #3cf;
+}
+.product_details_tab {
+    width: 100%;
+    height: 50px;
+    margin-top: -40px;
+    float: left;
+    border-bottom: solid 1px #ccc;
+}
+
+ol, ul {
+    list-style: none;
+}
+.product_details_tab li {
+    float: left;
+    display: inline-block;
+}
+.product_details_tab a.active:hover {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    border-bottom-color: #fff;
+}
+
+.product_details_tab a:hover {
+    color: #fff;
+    background-color: #1ab7ea;
+    border-color: #1ab7ea;
+}
+.product_details_tab a.active {
+    height: 51px;
+    color: #333;
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+.product_details_tab a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    float: left;
+    color: #1ab7ea;
+    background-color: #eee;
+    text-decoration: none;
+    border: solid 1px #ccc;
+    border-left: none;
+}
+a:hover {
+    color: #3cf;
+}
