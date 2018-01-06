@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from '@angular/forms';
 import { HouseManagementModule } from './modules/house-management/house-management.module';
+import { Route } from '@angular/router';
 
 import { appRouter } from "./app.route";
 

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'view-house-component',
@@ -6,6 +9,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 
-export class SignInComponent {
+export class SignInComponent implements OnInit{
   
+  constructor(
+    private router: Router
+  ) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  signIn(form: NgForm) {
+    /**
+     * do something here
+     */
+    console.log("entered signIn()");
+    this.router.navigate(["/houses"]);
+  }
+
 }

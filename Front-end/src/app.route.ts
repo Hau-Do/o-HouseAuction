@@ -4,17 +4,18 @@ import { SignInComponent } from './modules/account-management/components/sign-in
 
 export const router: Routes = [
     {
-        path: '',
-        loadChildren: 'modules/house-management/house-management.module#HouseManagementModule',
-        pathMatch: 'full'
+        path: '', redirectTo: '/login', pathMatch: 'full'
+    },
+    {
+        path: 'login', component: SignInComponent
+    },
+    {
+        path: 'houses',
+        loadChildren: 'modules/house-management/house-management.module#HouseManagementModule'
     },
     {
         path: 'account',
         loadChildren: 'modules/account-management/account-management.module#AccountManagementModule'
-    },
-    {
-        path: 'login',
-        component: SignInComponent
     }
 ];
 
