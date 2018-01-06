@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { houseManagementRouter } from './house-management.routes';
 
 import { HouseManagementComponent } from './house-management.component';
-import { ViewHouseComponent } from './components/view-house/view-house.component';
+import { ViewHousesComponent } from './components/view-houses/view-houses.component';
 import { PostHouseComponent } from './components/post-house/post-house.component';
 import { ViewDetailHouseComponent } from './components/view-detail-house/view-detail-house.component';
 
@@ -15,7 +15,7 @@ import { ViewDetailHouseComponent } from './components/view-detail-house/view-de
   ],
   declarations: [
     HouseManagementComponent,
-    ViewHouseComponent,
+    ViewHousesComponent,
     PostHouseComponent,
     ViewDetailHouseComponent
   ]
