@@ -98,3 +98,26 @@ img {
     white-space: nowrap;
     overflow: hidden;
 }
+
+.item-row {
+    border: 1px solid rgb(245,245,245);
+}
+.img-wrapper {
+    width: 100%;
+    height: 15em;
+}
+.item-fweight {
+    /* font-weight: bold; */
+}
+.baths, .timer {
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+}
+.current-bid {
+    font-size: 26px;
+    padding: 10px 10px;
+}
+.btn-warning {
+    background-color: #FFA500;
+    border-color: #FFA900;
+}

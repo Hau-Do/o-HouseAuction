@@ -1,48 +1,59 @@
-<div id="auction_feed">
-    <div class="wrapper home-wrapper">
-        <div class="left_col">
-            <!-- House #1 -->
-            <div id="power-auctions_panel"> 
-                <div class="power_auctions_panel_inner">
-                    <div class="power-auction-box">
-                        <div class="power-auction-aimg ">
-                            <a href="/product/43-767/NEATMensWatchBlack">
-                                <img class="power-auction-img" auctionid="102555674" src="https://odis.homeaway.com/odis/listing/33836655-0230-4d8c-b397-f1c73e959440.c10.jpg"></a>
-                        </div>
-                        <div class="power-auction-ends">
-                            <div id="pa_1" seconds="13" style="color: rgb(255,0,0);">Ending ..</div>
-                        </div>
-                        <div class="power-auction-bid">292 ETH</div>
-                        <div class="power-auction-btn-td">
-                            <p class="info_data bidding_button">
-                                <a id="a_place_bid" href="/product/43-767/NEATMensWatchBlack" class="buttons bidding small powerauction">Place Bid</a>
-                            </p>
-                        </div>
-                    </div>
-                </div> 
+<!-- House #1 -->
+<div class="row item-row"> <!-- *ngFor="let house of houseList" // init value of houseList then can use this line *ngFor="" inside div element-->
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="img-wrapper">
+            <img src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG" 
+            width="100%" height="100%">
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8"> 
+        <address>
+            <h2>Nguyen Du, District 1, Ho Chi Minh city</h2>
+        </address>
+        <div class="row">
+            <div class="col-12 col-sm-5 col-md-6 col-lg-6 text-center">
+                <span class="pull-left">Single Family</span>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 beds">
+                    <span>4</span><br>
+                    <span class="item-fweight">Beds</span>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 baths">
+                    <span>2</span><br>
+                    <span class="item-fweight">Baths</span>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sqMeter">
+                    <span>2,055</span><br>
+                    <span class="item-fweight ">Sq M</span>
+                </div>
             </div>
-            <!-- House #2 -->
-            <div id="power-auctions_panel"> 
-                <div class="power_auctions_panel_inner">
-                    <div class="power-auction-box">
-                        <div class="power-auction-aimg ">
-                            <a href="/product/43-767/NEATMensWatchBlack">
-                                <img class="power-auction-img" auctionid="102555674" src="https://odis.homeaway.com/odis/listing/33836655-0230-4d8c-b397-f1c73e959440.c10.jpg"></a>
-                        </div>
-                        <div class="power-auction-ends">
-                            <div id="pa_1" seconds="13" style="color: rgb(255,0,0);">Ending ..</div>
-                        </div>
-                        <div class="power-auction-bid">292 ETH</div>
-                        <div class="power-auction-btn-td">
-                            <p class="info_data bidding_button">
-                                <a id="a_place_bid" href="/product/43-767/NEATMensWatchBlack" class="buttons bidding small powerauction">Place Bid</a>
-                            </p>
-                        </div>
-                    </div>
-                </div> 
+            <div class="col-12 col-sm-4 col-md-3 col-lg-3 text-center timer">
+                <div class="item-fweight">Time Left</div>
+                <table width="100%">
+                    <tbody>
+                        <tr class="counter Orange">
+                            <td>1</td>
+                            <td valign="top">:</td>
+                            <td>15</td>
+                            <td valign="top">:</td>
+                            <td>56</td>
+                        </tr>
+                        <tr class="item-fweight">
+                            <td>DAY</td>
+                            <td>&nbsp;</td>
+                            <td>HRS</td>
+                            <td>&nbsp;</td>
+                            <td>MINS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 text-center paddingLR0 ">
+                <div class="item-fweight">Current Bid</div>
+                <div class="current-bid">$107,000</div>
+                <button type="button" class="btn btn-warning" (click)="viewDetails(idHouse)">View Details</button>
             </div>
         </div>
     </div>
 </div>
-
 
