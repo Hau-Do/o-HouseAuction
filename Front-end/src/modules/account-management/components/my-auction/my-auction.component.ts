@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'view-house-component',
+  selector: 'my-auction-component',
   templateUrl: './my-auction.component.html',
   styleUrls: ['./my-auction.component.css']
 })

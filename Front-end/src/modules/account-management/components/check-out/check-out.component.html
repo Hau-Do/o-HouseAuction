@@ -1,0 +1,229 @@
+<div id="checkout" class="single_page checkout_payment">
+            <div id="content" style="min-height: 635px;">
+                <div class="wrapper">
+    
+                    <div id="heading">
+                        <div class="wrapper">
+                            <h1>
+                                Thanh toán</h1>
+                        </div>
+                    </div>
+    
+                    <div class="left">
+    
+                        <div id="payment_progress">
+                            <span class="progress_bar first">
+                                <a id="lnkProgressBarBillingAddress" class="active" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkProgressBarBillingAddress','')">Địa chỉ thanh toán</a></span>
+                            <span class="progress_bar second">
+                                <a id="lnkProgressBarDeliveryOptions" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkProgressBarDeliveryOptions','')">HÌnh thức giao hàng</a></span>
+                            <span class="progress_bar third" style="display: none;">
+                                <a id="lnkProgressBarPaymentOptions" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkProgressBarPaymentOptions','')">Các hình thức thanh toán</a></span>
+                            <span class="progress_bar fourth">
+                                <a id="ContentPlaceHolder1_lnkProgressBarStatus" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lnkProgressBarStatus','')">Tình trạng đơn hàng</a></span>
+                            <span class="progress_bar inactive"><a href="#invoice">
+                                Hoá đơn của bạn</a></span>
+                        </div>
+    
+    
+                        <div id="ContentPlaceHolder1_billing_address" class="payment_info active">
+    
+                            <div id="ContentPlaceHolder1_UpdateProgress1" style="display:none;" role="status" aria-hidden="true">
+        
+                                    <div class="divWaiting">
+                                        <span id="ContentPlaceHolder1_lblWait"> Please wait... </span>
+                                        <img id="ContentPlaceHolder1_imgWait" src="../Gfx/loader.gif" align="middle">
+                                    </div>
+                                
+    </div>
+                            <h2>
+                                Địa chỉ gửi hàng</h2>
+                            
+                            <div id="ContentPlaceHolder1_UpdatePanel1">
+        
+                                    <div class="payment_info_inner">
+                                        
+                                        <p id="ContentPlaceHolder1_p164" class="form-group has-success" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit164">Tên</span></label><input name="ctl00$ContentPlaceHolder1$txtFirstname" type="text" value="" id="ContentPlaceHolder1_txtFirstname" class="address_input form-control" required="" placeholder="Tên">
+                                            <span id="ContentPlaceHolder1_lit164_validate" class="required_field">*</span>
+                                        </p>
+                                        <p id="ContentPlaceHolder1_p165" class="form-group has-success" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit165">Họ</span></label><input name="ctl00$ContentPlaceHolder1$txtLastname" type="text" value="" id="ContentPlaceHolder1_txtLastname" class="address_input form-control" required="" placeholder="Họ">
+                                            <span id="ContentPlaceHolder1_lit165_validate" class="required_field">*</span>
+                                        </p>
+                                        <p id="ContentPlaceHolder1_p168" class="form-group" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit168">Thành Phố/Tỉnh</span></label>
+                                            
+                                            <span id="ContentPlaceHolder1_ddl_provincebg" class="option_placeholder">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlProvince" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlProvince\',\'\')', 0)" id="ContentPlaceHolder1_ddlProvince" class="address_input option_list form-control" required="">
+            <option selected="selected" value="">Chọn Thành phố/Tỉnh</option>
+            <option value="An Giang">An Giang</option>
+            <option value="Bạc Liêu">Bạc Liêu</option>
+            <option value="Bắc Giang">Bắc Giang</option>
+            <option value="Bắc Kạn">Bắc Kạn</option>
+            <option value="Bắc Ninh">Bắc Ninh</option>
+            <option value="Bến Tre">Bến Tre</option>
+            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+            <option value="Bình Định">Bình Định</option>
+            <option value="Bình Dương">Bình Dương</option>
+            <option value="Bình Phước">Bình Phước</option>
+            <option value="Bình Thuận">Bình Thuận</option>
+            <option value="Cao Bằng">Cao Bằng</option>
+            <option value="Cần Thơ">Cần Thơ</option>
+            <option value="Cà Mau">Cà Mau</option>
+            <option value="Gia Lai">Gia Lai</option>
+            <option value="Hải Dương">Hải Dương</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+            <option value="Hậu Giang">Hậu Giang</option>
+            <option value="Hưng Yên">Hưng Yên</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+            <option value="Hà Giang">Hà Giang</option>
+            <option value="Hà Nam">Hà Nam</option>
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hà Tĩnh">Hà Tĩnh</option>
+            <option value="Hòa Bình">Hòa Bình</option>
+            <option value="Khánh Hòa">Khánh Hòa</option>
+            <option value="Kiên Giang">Kiên Giang</option>
+            <option value="Kon Tum">Kon Tum</option>
+            <option value="Lai Châu">Lai Châu</option>
+            <option value="Long An">Long An</option>
+            <option value="Lạng Sơn">Lạng Sơn</option>
+            <option value="Lào Cai">Lào Cai</option>
+            <option value="Lâm Đồng">Lâm Đồng</option>
+            <option value="Nam Định">Nam Định</option>
+            <option value="Nghệ An">Nghệ An</option>
+            <option value="Ninh Bình">Ninh Bình</option>
+            <option value="Ninh Thuận">Ninh Thuận</option>
+            <option value="Phú Thọ">Phú Thọ</option>
+            <option value="Phú Yên">Phú Yên</option>
+            <option value="Quảng Bình">Quảng Bình</option>
+            <option value="Quảng Nam">Quảng Nam</option>
+            <option value="Quảng Ngãi">Quảng Ngãi</option>
+            <option value="Quảng Ninh">Quảng Ninh</option>
+            <option value="Quảng Trị">Quảng Trị</option>
+            <option value="Sơn La">Sơn La</option>
+            <option value="Sóc Trăng">Sóc Trăng</option>
+            <option value="Thanh Hóa">Thanh Hóa</option>
+            <option value="Thái Bình">Thái Bình</option>
+            <option value="Thái Nguyên">Thái Nguyên</option>
+            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+            <option value="Tiền Giang">Tiền Giang</option>
+            <option value="Trà Vinh">Trà Vinh</option>
+            <option value="Tuyên Quang">Tuyên Quang</option>
+            <option value="Tây Ninh">Tây Ninh</option>
+            <option value="Vĩnh Long">Vĩnh Long</option>
+            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+            <option value="Yên Bái">Yên Bái</option>
+            <option value="Điện Biên">Điện Biên</option>
+            <option value="Đắk Lăk">Đắk Lăk</option>
+            <option value="Đắk Nông">Đắk Nông</option>
+            <option value="Đồng Nai">Đồng Nai</option>
+            <option value="Đồng Tháp">Đồng Tháp</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+    
+        </select>
+                                            </span>
+                                            <span id="ContentPlaceHolder1_lit168_validate" class="required_field">*</span>
+                                        </p>
+    
+                                        <p id="ContentPlaceHolder1_p169" class="form-group" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit169">Quận/Huyện</span></label>
+                                            <span id="ContentPlaceHolder1_ddl_dictrictbg" class="option_placeholder">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlDistrict" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlDistrict\',\'\')', 0)" id="ContentPlaceHolder1_ddlDistrict" class="address_input option_list form-control" required="">
+            <option selected="selected" value=""></option>
+    
+        </select>
+                                            </span>
+                                            <span id="ContentPlaceHolder1_lit169_validate" class="required_field">*</span>
+                                        </p>
+    
+                                        <p id="ContentPlaceHolder1_p507" class="form-group" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit507">Phường/Xã</span></label>
+                                            <span id="ContentPlaceHolder1_ddl_dictrictsubbg" class="option_placeholder">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlDistrictSub" id="ContentPlaceHolder1_ddlDistrictSub" class="address_input option_list form-control" required="">
+    
+        </select>
+                                                
+                                            </span>
+                                            <span id="ContentPlaceHolder1_lit507_validate" class="required_field">*</span>
+                                        </p>
+    
+                                        <p id="ContentPlaceHolder1_p166" class="form-group" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit166">Địa chỉ</span></label><input name="ctl00$ContentPlaceHolder1$txtAddress" type="text" id="ContentPlaceHolder1_txtAddress" class="address_input form-control" required="" placeholder="Số + làng + đường" fld_length=">3">
+                                            <span id="ContentPlaceHolder1_lit166_validate" class="required_field">*</span>
+                                        </p>
+                                        
+    
+    
+    
+                                        <p id="ContentPlaceHolder1_p167" class="form-group country has-success" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit167">Quốc gia</span></label>
+                                            <span id="ContentPlaceHolder1_ddl_countrybg" class="option_placeholder disable_field">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlCountry" id="ContentPlaceHolder1_ddlCountry" disabled="disabled" class="aspNetDisabled address_input option_list form-control" required="">
+            <option selected="selected" value="vn">Vietnam</option>
+    
+        </select>
+                                            </span>
+                                            <span id="ContentPlaceHolder1_lit167_validate" class="required_field">*</span>
+                                        </p>
+    
+                                        <p id="ContentPlaceHolder1_p171" class="form-group email has-success" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit171">Email</span></label><input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" value="" id="ContentPlaceHolder1_txtEmail" disabled="disabled" class="aspNetDisabled address_input form-control" required=""><span id="ContentPlaceHolder1_lit171_validate" class="required_field">*</span>
+                                        </p>
+                                        <p id="ContentPlaceHolder1_p172" class="form-group" validation="vn">
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit172">Di động</span></label><input name="ctl00$ContentPlaceHolder1$txtPhone" type="text" id="ContentPlaceHolder1_txtPhone" class="general_input mobile_input form-control numbersOnly" required="" placeholder="Điện thoại" fld_length=">6"><span id="ContentPlaceHolder1_lit172_validate" class="required_field">*</span>
+                                            
+                                        </p>
+                                        <p id="ContentPlaceHolder1_p173" validation="vn">
+                                            
+                                            <label>
+                                                <span id="ContentPlaceHolder1_lit173">Hướng dẫn giao hàng</span></label><textarea name="ctl00$ContentPlaceHolder1$txtInfo" rows="3" cols="20" id="ContentPlaceHolder1_txtInfo" class="address_input text_area form-control" placeholder="(không bắt buộc)"></textarea><span id="ContentPlaceHolder1_lit173_validate" class="required_field"></span>
+                                        </p>
+                                    </div>                      
+    </div>
+                            <div class="checkout_progress">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$lnkBtnNext_billing_address" value="Tiếp theo" id="ContentPlaceHolder1_lnkBtnNext_billing_address" class="buttons checkout large bg-btn-icon">
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_UpdateProgress2" style="display:none;" role="status" aria-hidden="true">
+        
+                                <div class="divWaiting">
+                                    <span id="ContentPlaceHolder1_lblWait1"> Please wait... </span>
+                                    <img id="ContentPlaceHolder1_imgWait1" src="../Gfx/loader.gif" align="middle">
+                                </div>
+                            
+    </div>
+                        <div id="ContentPlaceHolder1_UpdatePanel2">    
+    </div>                   
+                    </div>
+            <div class="right">
+                <div id="ContentPlaceHolder1_UpdatePanel4">
+            <div id="ContentPlaceHolder1_pnlRightOrderInfo">
+        </div>
+                            
+    </div>
+    </div>
+</div>
+</div>
+    <div class="got_question visible-xs" id="popupright">
+        <div class="popup_btn">
+            <a id="popup_button">
+                CÓ CÂU HỎI?</a> <a id="popup_close"></a>
+        </div>
+        <div class="popup_box_content">
+            <div id="help_center_mobile">
+                <h2>Có câu hỏi?</h2>
+    <p>Vui lòng liên hệ bộ phận hỗ trợ 24 giờ của chúng tôi.</p>
+    <p class="customer_support_tel">Sdt. support.vn@chilindo.com</p>
+            </div>
+        </div>
+    </div>
+</div>
