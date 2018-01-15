@@ -1,0 +1,9 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+
+# Private Ethereum Blockchain
+/o-HouseAuction_Private-Blockchain
+
+# System Files
+.DS_Store
+Thumbs.db
