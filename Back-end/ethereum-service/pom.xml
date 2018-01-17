@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.bidhouse</groupId>
-	<artifactId>enthereum-service</artifactId>
+	<artifactId>ethereum-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>enthereum-service</name>
+	<name>ethereum-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -51,6 +51,13 @@
 			<artifactId>core</artifactId>
 			<version>3.2.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>abi</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
