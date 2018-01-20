@@ -54,9 +54,9 @@ public class EthereumConnection {
 		}
 
 		// Deploy and transfer contract
-		BigInteger gasPrice = BigInteger.valueOf(4700000); // 0.0000000000047 ETHER
-		BigInteger gasLimit = BigInteger.valueOf(3100000); // 0.0000000000031 ETHER
-		BigInteger totalSupply = BigInteger.valueOf(1000000);
+		BigInteger gasPrice = BigInteger.valueOf(00000); // 0.0000000000047 ETHER
+		BigInteger gasLimit = BigInteger.valueOf(00000); // 0.0000000000031 ETHER
+		BigInteger totalSupply = BigInteger.valueOf(000000);
 		String tokenName = new String(accountAddress);
 		BigInteger decimalUnits = BigInteger.valueOf(8);
 		String tokenSymbol = new String("baotoan123");
