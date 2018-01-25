@@ -14,6 +14,7 @@ import { PreFooterComponent } from "./layouts/pre-footer/pre-footer.component";
 import { SignInComponent } from "./modules/account-management/components/sign-in/sign-in.component";
 import { MyCartComponent } from "./modules/account-management/components/my-cart/my-cart.component";
 import { MyAuctionComponent } from "./modules/account-management/components/my-auction/my-auction.component";
+// import { ViewDetailHouseComponent } from "./modules/house-management/components/view-detail-house/view-detail-house.component";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MyAuctionComponent } from "./modules/account-management/components/my-a
         SignInComponent,
 
         MyCartComponent,
-        MyAuctionComponent
+        MyAuctionComponent,
+        // ViewDetailHouseComponent
     ],
     imports: [
         HouseManagementModule,

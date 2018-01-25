@@ -31,6 +31,6 @@ export class ViewHousesComponent implements OnInit {
 
   viewDetails(idHouse: string) {
     console.log("clicked - idHouse");
-    this.router.navigate(['/detail-house']);
+    this.router.navigate(['detail-house', idHouse]);
   }
 }

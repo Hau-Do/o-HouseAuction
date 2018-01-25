@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'view-detail-house-component',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class ViewDetailHouseComponent {
-  
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe( params => console.log(params) );
+  }
 }
