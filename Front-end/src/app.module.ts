@@ -12,6 +12,8 @@ import { MainMenuComponent } from "./layouts/main-menu/main-menu.component";
 import { FooterComponent } from "./layouts/footer/footer.component";
 import { PreFooterComponent } from "./layouts/pre-footer/pre-footer.component";
 import { SignInComponent } from "./modules/account-management/components/sign-in/sign-in.component";
+import { MyCartComponent } from "./modules/account-management/components/my-cart/my-cart.component";
+import { MyAuctionComponent } from "./modules/account-management/components/my-auction/my-auction.component";
 
 
 @NgModule({
@@ -21,7 +23,10 @@ import { SignInComponent } from "./modules/account-management/components/sign-in
         MainMenuComponent,
         PreFooterComponent,
         FooterComponent,
-        SignInComponent
+        SignInComponent,
+
+        MyCartComponent,
+        MyAuctionComponent
     ],
     imports: [
         HouseManagementModule,

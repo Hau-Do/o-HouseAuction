@@ -222,4 +222,16 @@ li a .mobile-icon{display:none;}
 display: none;
 }  
 .lang-button-close{display:none;}
-#languages,#cart,#user_profile,#view_return_condition,#view_shipping_condition,#view_payment_condition,#view_faq{display:none;} 
+#languages,#cart,#user_profile,#view_return_condition,#view_shipping_condition,#view_payment_condition,#view_faq{display:none;}
+
+.navbar-page {
+    background-color: #1ab7ea;
+}
+
+.ul-menu-item {
+    float: right;
+}
+
+.nav-item {
+    padding: 0 2em;
+}

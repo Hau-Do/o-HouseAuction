@@ -1,14 +1,14 @@
-<!-- <nav class="navbar navbar-default   ">
+<nav class="navbar navbar-default navbar-page">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">o-HouseAuction</a> 
+            <a class="navbar-brand" [routerLink]="['view-house']">o-HouseAuction</a> 
         </div>
-        <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/']">House Management</a>
+        <ul class="nav navbar-nav mr-auto ul-menu-item">
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['my-cart']">My Cart</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/account']">Account Management</a>
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['my-auctions']">My Auctions</a>
             </li>
             <li ngbDropdown class="nav-item dropdown pointer">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
@@ -37,13 +37,11 @@
             </li>
         </ul>
     </div>
-</nav> -->
+</nav>
 
-<div id="header" class="">           
+<!-- <div id="header" class="">           
 	<div class="wrapper" id="wrapper"> 
 		<div id="mobileMenu" class="mobile-menu">
-			
-			<!-- <img id="imgPrimary_select" class="mobile-icon" src="/gfx/Icons-Chilindo-END-mobile.png"> -->
 			<a class="mobile-menu-close"></a>
 		</div>
 		<div id="logo">
@@ -54,7 +52,6 @@
 		<div id="users">
 			
 			<div class="user-nav-bar">
-				<!-- <img src="/gfx/all-menu.png" alt="All menu"> -->
 				 <span id="uPanelCartItemCountSmall">
 				
 					 </span>
@@ -73,20 +70,6 @@
 						</li>
 				<li><a href="/account/my-auction" class="my_auction_link">
 					My Auctions</a></li>
-				<li id="lang_selection">
-					<a href="javascript://" id="lang_button" class="lang_button_en lang_button">
-						<span id="lit77">Ngôn ngữ</span>
-						<b class="lang-button-close"></b>
-					</a>
-					<ul id="languages" class="en_current sub-menu">
-						<li>
-							<!-- <a id="repLanguages_lnkLang_0" class="lnkLang_vi" ident="vi" flagpath="/gfx/flags/vn.png" txtid="1352" href="javascript:__doPostBack('ctl00$repLanguages$ctl00$lnkLang','')" style="font-weight:normal;">Vietnamese<img src="/gfx/flags/vn.png" alt="ico" class="flag_icon"></a></li>   -->
-					
-						<li>
-							<!-- <a id="repLanguages_lnkLang_1" class="lnkLang_en" ident="en" flagpath="/gfx/flags/en.png" txtid="1348" href="javascript:__doPostBack('ctl00$repLanguages$ctl01$lnkLang','')" style="font-weight:bold;">English<img src="/gfx/flags/en.png" alt="ico" class="flag_icon"></a></li>   -->
-					
-					</ul>
-				</li>
 				<li id="liUserSignIn">        
                     <div id="register">
                         <a href="/account/login" id="popsignin" class="sign_in" style="cursor: pointer" data-toggle="modal" data-target="#SignUpData"> 
@@ -115,4 +98,4 @@
 			<input type="hidden" name="ctl00$hdnChilindoAppUser" id="hdnChilindoAppUser" value="vinhnguyen220195@yahoo.com#vi">          
 		</div>
 	</div>
-</div>
+</div> -->
