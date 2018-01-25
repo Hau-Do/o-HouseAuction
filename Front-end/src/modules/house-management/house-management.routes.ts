@@ -8,16 +8,10 @@ import { HouseManagementComponent } from './house-management.component';
 
 const HOUSE_MANAGEMENT_ROUTE: Routes = [
     {
-        path: '',
-        component: HouseManagementComponent,
+        path: '', component: HouseManagementComponent,
         children: [
-            {
-                path: '',
-                children: [
-                    { path: 'house', component: ViewDetailHouseComponent },
-                    { path: 'post', component: PostHouseComponent }
-                ]
-            }
+            { path: 'detail-house', component: ViewDetailHouseComponent },
+            { path: 'post-house', component: PostHouseComponent }
         ]
     }
 ];

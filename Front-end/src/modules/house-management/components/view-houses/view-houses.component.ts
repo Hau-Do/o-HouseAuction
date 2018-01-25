@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { House } from '../../../../shared/models/house';
 
@@ -30,6 +31,6 @@ export class ViewHousesComponent implements OnInit {
 
   viewDetails(idHouse: string) {
     console.log("clicked - idHouse");
-    this.router.navigate(["/house"]);
+    this.router.navigate(['/detail-house']);
   }
 }
