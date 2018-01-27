@@ -1,0 +1,14 @@
+server:
+  port: 1111
+
+spring:
+  application:
+    name: account-service
+      
+    
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+  
