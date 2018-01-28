@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from '@angular/forms';
 import { HouseManagementModule } from './modules/house-management/house-management.module';
@@ -24,6 +25,7 @@ import { SignInComponent } from "./modules/account-management/components/sign-in
         SignInComponent
     ],
     imports: [
+        HttpModule,
         HouseManagementModule,
         // LayoutsModule,
         BrowserModule,

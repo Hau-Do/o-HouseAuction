@@ -8,17 +8,21 @@ import { MyAuctionComponent } from './components/my-auction/my-auction.component
 import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 
+import { AccountManagementService } from './account-management.service';
+
 
 @NgModule({
   imports: [
       accountManagementRouter
-
   ],
   declarations: [
     AccountManagementComponent,
     MyAuctionComponent,
     MyCartComponent,
     CheckOutComponent
+  ],
+  providers : [
+  	AccountManagementService
   ]
 })
 export class AccountManagementModule { }

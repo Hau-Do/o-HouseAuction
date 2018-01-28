@@ -1,14 +1,18 @@
-import {Observable} from 'rxjs/Rx'
-import {Injectable} from '@angular/core';
-import {Http, Headers, Response, RequestOptions} from '@angular/http';
-
-
-export interface IMockupAPI {}
+import { Observable } from 'rxjs/Rx'
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { environment } from "../../environments/environment";
 
 @Injectable()
-export class MockupAPI implements IMockupAPI {
+export class APIService {
+    protected apiHost : string = environment.apiHost;
+    protected page : number;
+    protected size : number;
 
-	constructor(protected http: Http) { }
+	constructor(protected http: Http) { 
+        this.page = 0;
+        this.size = 0;
+    }
 
     /**
      * @param {string} method - api method
@@ -44,6 +48,7 @@ export class MockupAPI implements IMockupAPI {
         }
         if(call){
         	return call.map(res => {
+                console.log(res);
         		if(res._body !== "" && res._body !== null){
         			res._body = '{"data" : ' + res._body + ', "status" : ' + res.status + '}';
         			let result = res.json();
@@ -67,12 +72,13 @@ export class MockupAPI implements IMockupAPI {
         	});	
         }
     }
-    public getApiEndpoint(path : string, apiName : string, params : Array<string>) : string{
-    	let apiEndpoint : string = apiName;
+    public getApiEndpoint(path : string, params : Array<any>) : string{
+    	let apiEndpoint : string = path;
     	let paramLength = params.length;
     	for(let i = 0; i < paramLength; i++){
     		apiEndpoint = apiEndpoint.replace("$" + (i + 1), params[i]);
     	}
+        apiEndpoint = this.apiHost + apiEndpoint.replace(/\/\//g,"\/").replace("\/","");
     	return apiEndpoint;
     }
 }
