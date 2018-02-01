@@ -9,7 +9,7 @@ export class APIService {
     protected page : number;
     protected size : number;
 
-	constructor(protected http: Http) { 
+    constructor(protected http: Http) { 
         this.page = 0;
         this.size = 0;
     }
@@ -48,7 +48,6 @@ export class APIService {
         }
         if(call){
         	return call.map(res => {
-                console.log(res);
         		if(res._body !== "" && res._body !== null){
         			res._body = '{"data" : ' + res._body + ', "status" : ' + res.status + '}';
         			let result = res.json();
@@ -60,7 +59,7 @@ export class APIService {
         				}
         				return Observable.of(error);
         			}
-        			return result;
+        			return result.data;
         		}
 
         	}).catch((error) => {
@@ -68,17 +67,19 @@ export class APIService {
         			error.status = 504;
         			error.statusText = "Gateway Time-out";
         		}
-        		return Observable.of(error);
+        		return Observable.throw(error);
         	});	
         }
     }
-    public getApiEndpoint(path : string, params : Array<any>) : string{
+    public getApiEndpoint(path : string, params? : Array<any>) : string{
     	let apiEndpoint : string = path;
-    	let paramLength = params.length;
-    	for(let i = 0; i < paramLength; i++){
-    		apiEndpoint = apiEndpoint.replace("$" + (i + 1), params[i]);
-    	}
+        if(params){
+            let paramLength = params.length;
+            for(let i = 0; i < paramLength; i++){
+                apiEndpoint = apiEndpoint.replace("$" + (i + 1), params[i]);
+            }
+        }
         apiEndpoint = this.apiHost + apiEndpoint.replace(/\/\//g,"\/").replace("\/","");
-    	return apiEndpoint;
+        return apiEndpoint;
     }
 }

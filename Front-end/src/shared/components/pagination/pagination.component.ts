@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
 	selector: 'pagination-component',
@@ -6,8 +6,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 	styleUrls: ['chat.component.css']
 })
 export class AccountManagementComponent implements OnInit, OnDestroy { 
+	@Input('page') page : number; 
 	
-
 
 	ngOnInit(){
 

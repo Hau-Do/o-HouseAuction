@@ -8,22 +8,22 @@
  @Injectable()
  export class AccountManagementService extends APIService {
  	private apiName = {
- 		getAccounts : "account?page=$1&size=$2"
+ 		getAccounts : "account"
  	}
 
  	constructor (protected http : Http){
  		super(http);
- 		this.apiHost += "account/";
+ 		this.apiHost += "oha-account/";
  	}
 
  	getAccounts(){
- 		let apiEndpoint = this.getApiEndpoint(this.apiName.getAccounts , [1, 10]);
+ 		let apiEndpoint = this.getApiEndpoint(this.apiName.getAccounts);
  		this.callAPI("GET", apiEndpoint).subscribe(
- 			res =>{
-
+ 			data =>{
+ 				console.log(data);
  			},
  			err =>{
-
+ 				console.log(err);
  			}
  		);
  	}
