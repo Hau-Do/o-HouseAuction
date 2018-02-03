@@ -11,11 +11,12 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { OrderStatusComponent } from './components/check-out/order-status/order-status.component';
 import { AddressInformationComponent } from './components/check-out/adddress-information/address-information.component';
 
+import { AccountManagementService } from './account-management.service';
+
 
 @NgModule({
   imports: [
       accountManagementRouter
-
   ],
   declarations: [
     AccountManagementComponent,
@@ -25,6 +26,9 @@ import { AddressInformationComponent } from './components/check-out/adddress-inf
     OrderStatusComponent,
     SignInComponent,
     AddressInformationComponent
+  ],
+  providers : [
+    AccountManagementService
   ]
 })
 export class AccountManagementModule { }
