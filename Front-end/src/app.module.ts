@@ -7,13 +7,11 @@ import { Route } from '@angular/router';
 import { appRouter } from "./app.route";
 
 import { AppComponent } from "./app.component";
-import { NavBarComponent } from './layouts/navbar/navbar.component';
-import { MainMenuComponent } from "./layouts/main-menu/main-menu.component";
-import { FooterComponent } from "./layouts/footer/footer.component";
-import { PreFooterComponent } from "./layouts/pre-footer/pre-footer.component";
-import { SignInComponent } from "./modules/account-management/components/sign-in/sign-in.component";
-import { MyCartComponent } from "./modules/account-management/components/my-cart/my-cart.component";
-import { MyAuctionComponent } from "./modules/account-management/components/my-auction/my-auction.component";
+import { NavBarComponent } from './snippets/navbar/navbar.component';
+import { MainMenuComponent } from "./snippets/main-menu/main-menu.component";
+import { FooterComponent } from "./snippets/footer/footer.component";
+import { PreFooterComponent } from "./snippets/pre-footer/pre-footer.component";
+import { AccountManagementModule } from "./modules/account-management/account-management.module";
 // import { ViewDetailHouseComponent } from "./modules/house-management/components/view-detail-house/view-detail-house.component";
 
 
@@ -24,14 +22,10 @@ import { MyAuctionComponent } from "./modules/account-management/components/my-a
         MainMenuComponent,
         PreFooterComponent,
         FooterComponent,
-        SignInComponent,
-
-        MyCartComponent,
-        MyAuctionComponent,
-        // ViewDetailHouseComponent
     ],
     imports: [
         HouseManagementModule,
+        AccountManagementModule,
         // LayoutsModule,
         BrowserModule,
         FormsModule,

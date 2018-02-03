@@ -10,31 +10,21 @@
             <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link" [routerLink]="['my-auctions']">My Auctions</a>
             </li>
-            <li ngbDropdown class="nav-item dropdown pointer">
-                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
-                    <span>
-                        <span>Peter.Do</span>
-                        <b class="caret"></b>
-                    </span>
-                </a>
-                <ul class="dropdown-menu" ngbDropdownMenu>
-                    <li>
-                        <a class="dropdown-item">
-                            <span>My Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item">
-                            <span>My Orders</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item">
-                            <span>Log Out</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Peter Do<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li class="nav-item" [routerLinkActive]="['active']">
+						<a class="nav-link" >My Profile</a>
+					</li>
+					<li class="nav-item" [routerLinkActive]="['active']">
+						<a class="nav-link" [routerLink]="['order-status']">My Orders</a>
+					</li>
+					<li role="separator" class="divider"></li>
+					<li class="nav-item" [routerLinkActive]="['active']">
+						<a class="nav-link" (click)=logOut()>Log Out</a>
+					</li>
+				</ul>
+			</li>
         </ul>
     </div>
 </nav>

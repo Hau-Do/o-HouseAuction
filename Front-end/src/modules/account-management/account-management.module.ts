@@ -7,6 +7,9 @@ import { AccountManagementComponent } from './account-management.component';
 import { MyAuctionComponent } from './components/my-auction/my-auction.component';
 import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { OrderStatusComponent } from './components/check-out/order-status/order-status.component';
+import { AddressInformationComponent } from './components/check-out/adddress-information/address-information.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { CheckOutComponent } from './components/check-out/check-out.component';
     AccountManagementComponent,
     MyAuctionComponent,
     MyCartComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    OrderStatusComponent,
+    SignInComponent,
+    AddressInformationComponent
   ]
 })
 export class AccountManagementModule { }
