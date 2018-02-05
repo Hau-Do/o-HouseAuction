@@ -303,3 +303,7 @@ ol, ul {
 a:hover {
     color: #3cf;
 }
+
+#spanCountDown {
+    font-size: 0.6em;
+}

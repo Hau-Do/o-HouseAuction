@@ -25,8 +25,8 @@ export class SignInComponent implements OnInit{
     /**
      * do something here
      */
-    console.log("entered signIn()");
-    this.router.navigate(["/houses"]);
+    this.router.navigate(['../view-house']);
+    console.log("signed in");
   }
 
 }
