@@ -1,0 +1,22 @@
+web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+eth.pendingTransactions
+eth.getBalance("35a3227d74222259ddd90bc555d7cb7cc5e64d60")
+\q
+.
+\q
+q
+1
+web3.fromWei(eth.getBalance(eth.accounts[0]), “ether”)
+web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+web3.fromWei(eth.getBalance(eth.accounts[0]))
+eth.pendingTransactions
+q
+web3.fromWei(eth.getBalance("ea4c06cd-58c9-4f25-8340-954b07b6b512"))
+web3.fromWei(eth.getBalance(ea4c06cd-58c9-4f25-8340-954b07b6b512))
+web3.fromWei(eth.getBalance(35a3227d74222259ddd90bc555d7cb7cc5e64d60))
+web3.fromWei(eth.getBalance("35a3227d74222259ddd90bc555d7cb7cc5e64d60"))
+web3.fromWei(eth.getBalance("647ab99751d57803066778240a3f355fe8748c8a"))
+web3.fromWei(eth.getBalance("35a3227d74222259ddd90bc555d7cb7cc5e64d60"))
+web3.fromWei(eth.getBalance("647ab99751d57803066778240a3f355fe8748c8a"))
+web3.fromWei(eth.getBalance("35a3227d74222259ddd90bc555d7cb7cc5e64d60"))
+web3.eth.pendingTransactions
