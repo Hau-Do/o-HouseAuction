@@ -6,7 +6,7 @@
                 </div>
                 <div id="product_id_1" class="extended_view single_product">
                     <h2 class="product_title">
-                        <a id="ContentPlaceHolder1_lnkTitle"><span id="ContentPlaceHolder1_lbTitle">69/6 Nguyen Du, District 1, Ho Chi Minh city</span></a>
+                        <a id="ContentPlaceHolder1_lnkTitle"><span id="ContentPlaceHolder1_lbTitle">97/2 Nguyen Du, District 1, Ho Chi Minh City</span></a>
                     </h2>
                     <div id="ContentPlaceHolder1_UpdatePanel2">
                         <div id="ContentPlaceHolder1_pBiddingInfo1" style="display: none" class="bidding_info_fail mbid_info fixed-mbid">
@@ -14,13 +14,11 @@
                         </div>
                     </div>
                     <div class="product_photo_wrp">
-                    	<div class="product_photo"><div class="zoomWrapper"><img id="ContentPlaceHolder1_imgProductPhoto" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG" style="max-width: 100%;border-bottom: 1px solid #ccc;border-right: 1px solid #ccc;"></div></div>
+                    	<div class="product_photo"><div class="zoomWrapper"><img id="ContentPlaceHolder1_imgProductPhoto" src="assets/images/inside5.jpg" style="max-width: 100%;border-bottom: 1px solid #ccc;border-right: 1px solid #ccc;"></div></div>
                         <ul class="product_gallery" id="gallery_id_60297">
-                            <li><a id="ContentPlaceHolder1_aProduct1" class="product_thumb img72 active" data-image="" data-zoom-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_01_720.jpg"><img id="ContentPlaceHolder1_imgGallery1" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG"></a></li>
-                            <li><a id="ContentPlaceHolder1_aProduct2" class="product_thumb img72" data-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_02_250.jpg" data-zoom-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_02_720.jpg"><img id="ContentPlaceHolder1_imgGallery2" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG"></a></li>
-                            <li><a id="ContentPlaceHolder1_aProduct3" class="product_thumb img72" data-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_03_250.jpg" data-zoom-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_03_720.jpg"><img id="ContentPlaceHolder1_imgGallery3" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG"></a></li>
-                            <li><a id="ContentPlaceHolder1_aProduct4" class="product_thumb img72" data-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_04_250.jpg" data-zoom-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_04_720.jpg"><img id="ContentPlaceHolder1_imgGallery4" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG"></a></li>
-                            <li><a id="ContentPlaceHolder1_aProduct5" class="product_thumb img72" data-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_05_250.jpg" data-zoom-image="http://www.chilindo.com/XML/Gfx/73-157/73-157_05_720.jpg"><img id="ContentPlaceHolder1_imgGallery5" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG"></a></li>
+                            <li><a id="ContentPlaceHolder1_aProduct1" class="product_thumb img72 active" ><img id="ContentPlaceHolder1_imgGallery1" src="assets/images/inside7.jpg"></a></li>
+                            <li><a id="ContentPlaceHolder1_aProduct2" class="product_thumb img72"><img id="ContentPlaceHolder1_imgGallery2" src="assets/images/inside6.jpg"></a></li>
+                            <li><a id="ContentPlaceHolder1_aProduct3" class="product_thumb img72"><img id="ContentPlaceHolder1_imgGallery3" src="assets/images/inside4.png"></a></li>
                         </ul>
                     </div>
                      
@@ -32,7 +30,7 @@
                         <div id="ContentPlaceHolder1_UpdatePanel1">
                             <div class="right">
                                 <p class="info_field current_bid_label">Giá thầu hiện tại: </p>
-                                <p class="info_data current_bid">$107,000</p>
+                                <p class="info_data current_bid">{{currentVal}} ETH</p>
                             </div>
                             <!-- <div class="left">
                                 <p class="info_field select_size_label">chọn màu/kích cỡ: </p>
@@ -48,40 +46,33 @@
                                     </span>
                                 </p>
                             </div> -->
-                            <div class="right">
+                            <div class="right right-bid-btn">
                                 <span id="ContentPlaceHolder1_Timer1" style="visibility:hidden;display:none;"></span>
                                 <p class="info_field place_bid_label">Đấu giá ngay: <!-- <a href="#view_faq" class="bidding_help">?</a> --> </p>
-                                <div class="info_data place_bid">
+                                <div class="info_data place_bid" style="display: grid;">
                                     <span class="bidding_box">
                                         <span class="bid_box">
-                                            
                                             <span class="minus box_puls_minus">
-                                                <input class="slider_minus" type="button" value="-" id="moins">
+                                                <input class="slider_minus" type="button" value="-" (click)="updateVal(-1)" id="moins">
                                             </span>
                                             <span class="bid_text_number">
-                                                <input name="ctl00$ContentPlaceHolder1$txtBidNew" value="107,500" maxlength="10" id="ContentPlaceHolder1_txtBidNew" type="tel" onblur="document.getElementById('ContentPlaceHolder1_txtBid').value = this.value" class="input_placebid">
-                                                <input name="ctl00$ContentPlaceHolder1$txtBid" type="text" value="107,500" maxlength="10" id="ContentPlaceHolder1_txtBid" class="input_placebid" data-slider-values="616,657,698,739,780,821,862,903,944,985,1026,1067,1108,1149,1190,1231,1272,1313,1354,1395,1436" style="display:none;">
-                                              
+                                                <input name="ctl00$ContentPlaceHolder1$txtBidNew" [value]="biddingVal" maxlength="10" id="ContentPlaceHolder1_txtBidNew" type="tel" onblur="document.getElementById('ContentPlaceHolder1_txtBid').value = this.value" class="input_placebid" style="text-align: center;">
                                             </span>
                                             <span class="puls box_puls_minus">
-                                                <input class="slider_plus" type="button" value="+" id="plus">
+                                                <input class="slider_plus" type="button" value="+" (click)="updateVal(1)" id="plus" onblur="biddingVal++">
                                             </span>
                                         </span>
                                     </span> 
                                     <script type="text/javascript">
                                         document.getElementById('ContentPlaceHolder1_txtBidNew').value = document.getElementById('ContentPlaceHolder1_txtBid').value;
                                     </script>
-                                    <span class="bidding_button"><a id="ContentPlaceHolder1_btnBid" class="buttons bidding large" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$btnBid','')"><!--<span class="place_one">Đấu giá ngay</span>--><span class="bidding_two"> Bid</span></a></span>
-                                
-                                    <p class="service_charge">5% phí dịch vụ</p> 
-
-                                     
-                                    
+                                    <button type="button" class="btn btn-primary" (click)="bidNow(biddingVal)" style="margin: 4px 4em;">Bid Now</button>
+                                    <p class="service_charge">2% fee (Seller pays at Closing)</p>
                                 </div>
                                 <div class="info-product-right">
                                     <p class="bidding_msg"></p>
 
-                                    <div class="current-winner">
+                                    <!-- <div class="current-winner">
                                         <div class="left-winner-icon">
                                         <img src="/Gfx/current_winner.jpg" alt="current_winner">
                                         </div>
@@ -90,7 +81,7 @@
                         	            <p class="info_data"><span class="current_winner">kẹo.bông.199223 </span></p>
                                         </div>
                                         
-                                    </div>                            
+                                    </div>-->
                                     <p id="ContentPlaceHolder1_pBiddingInfo" style="display:none" class="bidding_info_fail fbid_info">Giá mới trong phiên đấu giá!
 Giá thầu tối thiểu tiếp theo: 616.000</p>
                                     <p class="bidding_wait_msg"></p>
@@ -151,19 +142,19 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                         <div id="view_history">
                         <ul class="bidding_history">
                             <li class="history_heading">
-                                <span class="bid_user">Tài khoản / Tự động đấu giá</span>
-                                <span class="bid_amount">Giá dự thầu, ₫</span>
+                                <span class="bid_user">Tài khoản</span>
+                                <span class="bid_amount">Giá dự thầu</span>
                                 <span class="bid_total">Tổng giá thầu</span>
                                 <span class="bid_time">Thời gian đấu giá</span>
                             </li>
                             <li class="history_rows odd">
                                 <span class="bid_user current_winner pro_user">kẹo.bông.199223  </span>
-                                <span class="bid_amount">$107,000</span>
+                                <span class="bid_amount">114 ETH</span>
                                 <span class="bid_total">1</span>
                                 <span class="bid_time">24-12-2017 18:31:15 </span>
                            </li>
 
-                            <span id="ContentPlaceHolder1_lbListOfBids"><li class="history_rows even"><span class="bid_user">nam.nguyen.729809  </span><span class="bid_amount">$106,500</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:12 </span></li><li class="history_rows odd"><span class="bid_user">huyên.nguyễn.110106  </span><span class="bid_amount">$106,000</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:07 </span></li><li class="history_rows even"><span class="bid_user">thach.do.198697  </span><span class="bid_amount">$105,500</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:00 </span></li><li class="history_rows odd"><span class="bid_user">văn nhật.hoàng.349079  </span><span class="bid_amount">$105,000</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:08 </span></li></span>
+                            <span id="ContentPlaceHolder1_lbListOfBids"><li class="history_rows even"><span class="bid_user">nam.nguyen.729809  </span><span class="bid_amount">112 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:12 </span></li><li class="history_rows odd"><span class="bid_user">huyên.nguyễn.110106  </span><span class="bid_amount">111 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:07 </span></li><li class="history_rows even"><span class="bid_user">thach.do.198697  </span><span class="bid_amount">110 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:00 </span></li><li class="history_rows odd"><span class="bid_user">văn nhật.hoàng.349079  </span><span class="bid_amount">109 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:08 </span></li></span>
 
 
                         </ul>
@@ -204,7 +195,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
 
                         </div>
                         <div id="view_faq">
-                            Khi giá thầu của bạn cao hơn giá thầu tối thiểu, hệ thống sẽ tự động đấu giá cho bạn. Lưu ý chúng tôi sẽ không bao giờ đấu giá cao hơn giá bạn đã đưa ra.<br><br>Hệ thống được thiết kế để giữ tiền cho bạn và cung cấp cho bạn cơ hội thắng đấu giá cao nhất với mức giá thấp nhất.<br><br>Với phương thức này bạn sẽ quyết định được mức giá tối đa bạn sẵn sàng trả cho sản phẩm và vẫn có cơ hội để thắng với mức giá thấp hơn mức giá tối đa mà bạn đã đưa ra.<br><br>Dưới đây là 1 ví dụ:<br><br>Một người dùng khác (Tạm gọi là Người Dùng 1) đưa ra giá thầu là 200k VND<br><br>Giá thầu của bạn là 300k VND.<br><br>Thay vì đấu giá với giá là 300k VND, thuật toán của chúng tôi sẽ điều chỉnh giá thầu của bạn xuống còn 200k VND.<br><br>Người Dùng 1 đưa ra giá thầu là 250k VND<br><br>Hệ thống của chúng tôi sẽ tự động đấu giá với mức giá bằng 250K VND cho bạn, bởi bạn đã đăng ký giá thầu tối đa mà bạn muốn trả cho sản phẩm là 300K VND.<br><br>Bạn vẫn sẽ thắng thầu với mức giá 250k VND.<br><br>Người Dùng 1 lại đưa ra giá thầu mới là 300k VND, bằng với giá đầu lúc đầu của bạn. Trong trường hợp này, hệ thống sẽ tự động khớp giá thầu của Người Dùng 1 và bạn vẫn là người thắng thầu với mức giá 300k VND<br><br>Chiến lược tốt là đưa ra một giá thầu tối đa cao từ ban đầu, như vậy bạn sẽ có cơ hội thắng thầu cao hơn, đặc biệt khi người dùng khác khớp với giá thầu của bạn<br><br>Người Dùng 1 đưa ra giá thầu mới là 310k VND<br><br>Bạn đã bị đấu giá cao hơn và Người Dùng 1 đang giữ lợi thế thắng cuộc. Nếu bạn muốn đưa ra giá thầu mới để thắng thầu bạn sẽ cần phải đưa ra giá thầu cao hơn 310k VND<br><br>Như vậy bạn có thể thắng, Chilindo được thiết kế để bạn có thể thắng đấu giá với giá tốt nhất.<br>
+                            Khi giá thầu của bạn cao hơn giá thầu tối thiểu, hệ thống sẽ tự động đấu giá cho bạn. Lưu ý chúng tôi sẽ không bao giờ đấu giá cao hơn giá bạn đã đưa ra.<br><br>Hệ thống được thiết kế để giữ tiền cho bạn và cung cấp cho bạn cơ hội thắng đấu giá cao nhất với mức giá thấp nhất.<br><br>Với phương thức này bạn sẽ quyết định được mức giá tối đa bạn sẵn sàng trả cho sản phẩm và vẫn có cơ hội để thắng với mức giá thấp hơn mức giá tối đa mà bạn đã đưa ra.<br><br>Dưới đây là 1 ví dụ:<br><br>Một người dùng khác (Tạm gọi là Người Dùng 1) đưa ra giá thầu là 200k VND<br><br>Giá thầu của bạn là 300k VND.<br><br>Thay vì đấu giá với giá là 300k VND, thuật toán của chúng tôi sẽ điều chỉnh giá thầu của bạn xuống còn 200k VND.<br><br>Người Dùng 1 đưa ra giá thầu là 250k VND<br><br>Hệ thống của chúng tôi sẽ tự động đấu giá với mức giá bằng 250K VND cho bạn, bởi bạn đã đăng ký giá thầu tối đa mà bạn muốn trả cho sản phẩm là 300K VND.<br><br>Bạn vẫn sẽ thắng thầu với mức giá 250k VND.<br><br>Người Dùng 1 lại đưa ra giá thầu mới là 300k VND, bằng với giá đầu lúc đầu của bạn. Trong trường hợp này, hệ thống sẽ tự động khớp giá thầu của Người Dùng 1 và bạn vẫn là người thắng thầu với mức giá 300k VND<br><br>Chiến lược tốt là đưa ra một giá thầu tối đa cao từ ban đầu, như vậy bạn sẽ có cơ hội thắng thầu cao hơn, đặc biệt khi người dùng khác khớp với giá thầu của bạn<br><br>Người Dùng 1 đưa ra giá thầu mới là 310k VND<br><br>Bạn đã bị đấu giá cao hơn và Người Dùng 1 đang giữ lợi thế thắng cuộc. Nếu bạn muốn đưa ra giá thầu mới để thắng thầu bạn sẽ cần phải đưa ra giá thầu cao hơn 310k VND<br><br>Như vậy bạn có thể thắng, ohouseacution được thiết kế để bạn có thể thắng đấu giá với giá tốt nhất.<br>
                         </div>
                     </div>
                 </div>
@@ -234,7 +225,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                     </li>
                 </ul>
                 <br>
-                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fchilindo.auction&amp;width=232&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=158776737652373" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:232px; height:230px; margin-left: -5px;" allowtransparency="true"></iframe>
+                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%ohouseacution.auction&amp;width=232&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=158776737652373" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:232px; height:230px; margin-left: -5px;" allowtransparency="true"></iframe>
                     <input type="hidden" name="ctl00$ContentPlaceHolder1$ending_soon$LowestBidAmount" id="ContentPlaceHolder1_ending_soon_LowestBidAmount" value="1000">
                 <br>
             <div class="auction-item">
@@ -244,7 +235,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                 <div class="item-box">
                     <h4>Nhẫn giữ điện thoại</h4>
                     <div class="item-box-left">
-                        <a href="/Product/41-450" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_0" aid="102890526" w250="/XML/Gfx/41-450/41-450-1_250.jpg" itemno="41-450"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_0" src="http://www.chilindo.com/XML/Gfx/41-450/41-450-1_75.jpg" style="border-width:0px;"></a>
+                        <a href="/Product/41-450" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_0" aid="102890526" w250="/XML/Gfx/41-450/41-450-1_250.jpg" itemno="41-450"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_0" src="http://www.ohouseacution.com/XML/Gfx/41-450/41-450-1_75.jpg" style="border-width:0px;"></a>
                         <div class="info_data timeout last_minute"></div>
                     </div>
                     <div class="item-box-right">
@@ -259,7 +250,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                 <div class="item-box">
                     <h4>Máy quay kĩ thuật số : đen</h4>
                     <div class="item-box-left">
-                        <a href="/Product/40-307" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_1" aid="102889407" w250="/XML/Gfx/40-307/40-307_0111_250.jpg" itemno="40-307"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_1" src="http://www.chilindo.com/XML/Gfx/40-307/40-307_0111_75.jpg" style="border-width:0px;"></a>
+                        <a href="/Product/40-307" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_1" aid="102889407" w250="/XML/Gfx/40-307/40-307_0111_250.jpg" itemno="40-307"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_1" src="http://www.ohouseacution.com/XML/Gfx/40-307/40-307_0111_75.jpg" style="border-width:0px;"></a>
                         <div class="info_data timeout last_minute"></div>
                     </div>
                     <div class="item-box-right">
@@ -274,7 +265,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                 <div class="item-box">
                     <h4>Đồng hồ đeo tay bluetooth</h4>
                     <div class="item-box-left">
-                        <a href="/Product/40-601" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_2" aid="102890333" w250="/XML/Gfx/40-601/40-601-jpg_250.jpg" itemno="40-601"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_2" src="http://www.chilindo.com/XML/Gfx/40-601/40-601-jpg_75.jpg" style="border-width:0px;"></a>
+                        <a href="/Product/40-601" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_2" aid="102890333" w250="/XML/Gfx/40-601/40-601-jpg_250.jpg" itemno="40-601"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_2" src="http://www.ohouseacution.com/XML/Gfx/40-601/40-601-jpg_75.jpg" style="border-width:0px;"></a>
                         <div class="info_data timeout last_minute"></div>
                     </div>
                     <div class="item-box-right">
@@ -289,7 +280,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                 <div class="item-box">
                     <h4>Tai nghe Stereo: Màu vàng / Xanh đậm</h4>
                     <div class="item-box-left">
-                        <a href="/Product/43-624" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_3" aid="102890480" w250="/XML/Gfx/43-624/43-624_01_250.jpg" itemno="43-624"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_3" src="http://www.chilindo.com/XML/Gfx/43-624/43-624_01_75.jpg" style="border-width:0px;"></a>
+                        <a href="/Product/43-624" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_3" aid="102890480" w250="/XML/Gfx/43-624/43-624_01_250.jpg" itemno="43-624"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_3" src="http://www.ohouseacution.com/XML/Gfx/43-624/43-624_01_75.jpg" style="border-width:0px;"></a>
                         <div class="info_data timeout last_minute"></div>
                     </div>
                     <div class="item-box-right">
@@ -304,7 +295,7 @@ Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá 
                 <div class="item-box">
                     <h4> Loa gắn ngoài ngoài trời: Màu đen</h4>
                     <div class="item-box-left">
-                        <a href="/Product/41-547" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_4" aid="102889462" w250="/XML/Gfx/41-547/41-547-1_250.jpg" itemno="41-547"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_4" src="http://www.chilindo.com/XML/Gfx/41-547/41-547-1_75.jpg" style="border-width:0px;"></a>
+                        <a href="/Product/41-547" id="ContentPlaceHolder1_ending_soon_repEndingSoon_lnkAuction_4" aid="102889462" w250="/XML/Gfx/41-547/41-547-1_250.jpg" itemno="41-547"><img id="ContentPlaceHolder1_ending_soon_repEndingSoon_imgItem_4" src="http://www.ohouseacution.com/XML/Gfx/41-547/41-547-1_75.jpg" style="border-width:0px;"></a>
                         <div class="info_data timeout last_minute"></div>
                     </div>
                     <div class="item-box-right">

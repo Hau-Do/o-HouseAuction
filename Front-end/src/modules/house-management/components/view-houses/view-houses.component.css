@@ -121,3 +121,6 @@ img {
     background-color: #FFA500;
     border-color: #FFA900;
 }
+.div-house-avatar {
+    padding-left: unset;
+}
