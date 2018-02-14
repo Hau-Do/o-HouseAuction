@@ -10,6 +10,11 @@ import com.bidhouse.listener.CascadeSaveMongoEventListener;
 @SpringBootApplication
 @EnableEurekaClient
 public class AccountServiceApplication {
+//	discovery-service
+//	configuration-service
+//	api-gateway
+//	house-service
+//	account-service
 
 	public static void main(String[] args) {
 		SpringApplication.run(AccountServiceApplication.class, args);
