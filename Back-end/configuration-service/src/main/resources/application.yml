@@ -1,15 +1,16 @@
 server:
   port: 9090
-  
+
 security:
   basic:
     enabled: false
-    
+
 spring:
   application:
-    name: configuration-service
+    name: oha-configuration-service
   profiles:
     active: native
+  # Specify configs location
   cloud:
     config:
       server:
@@ -20,5 +21,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8888/eureka/
-      
-  
+    # trying registry to eureka server
+    registry-fetch-interval-seconds: 5

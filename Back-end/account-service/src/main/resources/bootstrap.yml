@@ -1,5 +1,13 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:9090
+      discovery:
+        service-id: oha-configuration-service
+        enabled: true
+      name: account-service
       profile: dev
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
