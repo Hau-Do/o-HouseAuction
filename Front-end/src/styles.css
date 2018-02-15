@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  letter-spacing: 0.15rem;
+}
+html {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background:#FAFAFA;
+}
+body{
+	background:#FAFAFA;
+}
+*{
+	margin:0;
+	padding:0;
+	font-family:'Source Sans Pro', sans-serif;
+	box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+*::after, *::before{
+	box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+a[href]:not([class]) {
+  color: #2980b9;
+  text-decoration: underline;
+}
+.block{
+	display:block;
+}
+.flat{
+	border-radius:0;
+}

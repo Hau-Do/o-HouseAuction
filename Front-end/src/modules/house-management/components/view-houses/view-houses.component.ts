@@ -14,11 +14,12 @@ import { HouseManagementService } from "../../house-management.service";
 export class ViewHousesComponent implements OnInit, OnDestroy {
 
   // just test data
-  private houseList : Array<House>;
+  public houseList : Array<House> = [];
 
   constructor(
-    private router : Router, private houseManagementService : HouseManagementService
-    ) {
+    private router : Router,
+    private houseManagementService : HouseManagementService
+  ){
 
   }
 
@@ -30,11 +31,6 @@ export class ViewHousesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getHouses();
-  }
-
-  viewDetails(idHouse: string) {
-    console.log("clicked - idHouse");
-    this.router.navigate(['detail-house', idHouse]);
   }
 
   ngOnDestroy(){

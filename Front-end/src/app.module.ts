@@ -3,17 +3,17 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from '@angular/forms';
 import { HouseManagementModule } from './modules/house-management/house-management.module';
-import { Route } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import { appRouter } from "./app.route";
+import { APP_ROUTE } from "./app.route";
 
 import { AppComponent } from "./app.component";
 import { NavBarComponent } from './snippets/navbar/navbar.component';
 import { MainMenuComponent } from "./snippets/main-menu/main-menu.component";
 import { FooterComponent } from "./snippets/footer/footer.component";
 import { PreFooterComponent } from "./snippets/pre-footer/pre-footer.component";
+import { SharedModule } from "./shared/components/shared.module";
 import { AccountManagementModule } from "./modules/account-management/account-management.module";
-// import { ViewDetailHouseComponent } from "./modules/house-management/components/view-detail-house/view-detail-house.component";
 
 
 @NgModule({
@@ -22,16 +22,19 @@ import { AccountManagementModule } from "./modules/account-management/account-ma
         NavBarComponent,
         MainMenuComponent,
         PreFooterComponent,
-        FooterComponent,
+        FooterComponent
     ],
     imports: [
         HttpModule,
-        HouseManagementModule,
-        AccountManagementModule,
+        SharedModule,
         // LayoutsModule,
         BrowserModule,
         FormsModule,
-        appRouter
+        RouterModule.forRoot(APP_ROUTE)
+    ],
+    exports : [
+        RouterModule,
+        SharedModule
     ],
     providers: [],
     bootstrap: [AppComponent]

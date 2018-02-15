@@ -4,9 +4,10 @@ import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
+    moduleId : module.id,
     selector: 'navbar-component',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.css']
+    templateUrl: 'navbar.component.html',
+    styleUrls: ['navbar.component.css']
 })
 
 export class NavBarComponent implements OnInit {

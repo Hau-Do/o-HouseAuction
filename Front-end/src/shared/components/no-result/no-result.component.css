@@ -1,0 +1,31 @@
+/*
+* @Author: Uncle's Hung
+* @Date:   2018-02-13 18:40:20
+* @Last Modified by:   Uncle's Hung
+* @Last Modified time: 2018-02-13 19:49:20
+*/
+.no-result{
+	height:calc(100vh - 72px);
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-content: center;
+	justify-content: center;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+.no-result img{
+	height:130px;
+}
+.no-result h1{
+	letter-spacing: 0.35rem;
+}
+.no-result p {
+	letter-spacing: 0.25rem;
+	font-size:18px;
+}
+.no-result h1, .no-result p{
+	color:#BDBDBD;
+}

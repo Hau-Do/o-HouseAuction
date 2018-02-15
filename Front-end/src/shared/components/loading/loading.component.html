@@ -1,0 +1,21 @@
+<div class="loader" #spinnerElement style="opacity: 0; position: absolute;top: 0;left: 0;height: 100%; width: 100%">
+	<!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
+	<div class="loading">
+		<svg [attr.width.px]="size" [attr.height.px]="size" [attr.viewBox]="viewBox" xmlns="http://www.w3.org/2000/svg" [attr.stroke]="color">
+			<g fill="none" fill-rule="evenodd">
+				<g transform="translate(1 1)" [attr.stroke-width]="strokeWidth">
+					<circle stroke-opacity=".5" [attr.cx]="r" [attr.cy]="r" [attr.r]="rMinusStrokeWidth"/>
+					<path [attr.d]="d">
+						<animateTransform
+						attributeName="transform"
+						type="rotate"
+						[attr.from] = "from"
+						[attr.to] = "to"
+						dur="1s"
+						repeatCount="indefinite"/>
+					</path>
+				</g>
+			</g>
+		</svg>
+	</div>
+</div>

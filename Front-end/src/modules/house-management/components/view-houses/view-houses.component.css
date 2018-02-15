@@ -44,9 +44,6 @@
     overflow: hidden;
     max-width: 100%;
 }
-a {
-    color: #1ab7ea;
-}
 .power-auction-box img {
     width: 102%;
     height: auto;
@@ -100,11 +97,33 @@ img {
 }
 
 .item-row {
-    border: 1px solid rgb(245,245,245);
+    border: 1px solid #ecf0f1;
+    -moz-box-shadow:4px 4px 20px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.25);
+    box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.25);
+    margin-bottom:30px;
+    background:white;
 }
 .img-wrapper {
     width: 100%;
-    height: 15em;
+    position:relative;
+    overflow: hidden;
+    height:15em;
+    text-align: center;
+}
+.img-wrapper img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.img-wrapper img.portrait {
+  width: 100%;
+  height: auto;
 }
 .item-fweight {
     /* font-weight: bold; */
@@ -120,4 +139,60 @@ img {
 .btn-warning {
     background-color: #FFA500;
     border-color: #FFA900;
+}
+address h2{
+    padding:0 15px;
+}
+.type{
+    font-weight: 700;
+    font-size:18px;
+    height:36px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-content: center;
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+}
+.timer{
+    height:100%;
+}
+.beds, .baths, .sqMeter{
+    height:100px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-content: center;
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.timer table{
+    height:100px;
+}
+.counter td{
+    font-size:26px;
+}
+.row{
+    border-bottom:1px solid #ecf0f1;
+}
+.row:not(:first-child):last-child{
+    border-bottom:0;
+}
+.current-bid{
+    height:60px;
+}
+.details{
+    height:40px;
+    width:100%;
+    display:block;
+}
+@media (max-width: 767px){
+    .beds, .baths, .sqMeter{
+        border-bottom:1px solid #ecf0f1;
+    }
 }

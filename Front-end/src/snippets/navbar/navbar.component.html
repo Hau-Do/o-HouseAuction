@@ -1,32 +1,39 @@
 <nav class="navbar navbar-default navbar-page">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" [routerLink]="['view-house']">o-HouseAuction</a> 
-        </div>
-        <ul class="nav navbar-nav mr-auto ul-menu-item">
-            <li class="nav-item" [routerLinkActive]="['active']">
-                <a class="nav-link" [routerLink]="['my-cart']">My Cart</a>
-            </li>
-            <li class="nav-item" [routerLinkActive]="['active']">
-                <a class="nav-link" [routerLink]="['my-auctions']">My Auctions</a>
-            </li>
-            <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Peter Do<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li class="nav-item" [routerLinkActive]="['active']">
-						<a class="nav-link" >My Profile</a>
-					</li>
-					<li class="nav-item" [routerLinkActive]="['active']">
-						<a class="nav-link" [routerLink]="['order-status']">My Orders</a>
-					</li>
-					<li role="separator" class="divider"></li>
-					<li class="nav-item" [routerLinkActive]="['active']">
-						<a class="nav-link" (click)=logOut()>Log Out</a>
-					</li>
-				</ul>
-			</li>
-        </ul>
-    </div>
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" [routerLink]="['view-house']">o-HouseAuction</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="mainNavbar">
+			<ul class="nav navbar-nav mr-auto navbar-right">
+				<li class="nav-item" [routerLinkActive]="['active']">
+					<a class="nav-link" [routerLink]="['./account/my-cart']">My Cart</a>
+				</li>
+				<li class="nav-item" [routerLinkActive]="['active']">
+					<a class="nav-link" [routerLink]="['./account/my-auctions']">My Auctions</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Peter Do<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="nav-item" [routerLinkActive]="['active']">
+							<a class="nav-link" >My Profile</a>
+						</li>
+						<li class="nav-item" [routerLinkActive]="['active']">
+							<a class="nav-link" [routerLink]="['./account/order-status']">My Orders</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li class="nav-item" [routerLinkActive]="['active']">
+							<a class="nav-link" (click)=logOut()>Log Out</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
 <!-- <div id="header" class="">           
