@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: oha-configuration-service
+        enabled: true
+      name: house-service
+      profile: dev
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
