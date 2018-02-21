@@ -1,0 +1,20 @@
+#server:
+#  context-path: /web-app
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: api-gateway
+#      
+#zuul:
+#  routes:
+#    account-service:
+#      path: /oha-account/**
+#      sensitiveHeaders:
+#      service-id: account-service
+#    house-service:
+#      path: /oha-house/**
+#      sensitiveHeaders:
+#      service-id: house-service
+#        
+#        
