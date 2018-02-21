@@ -14,7 +14,17 @@ import { HouseManagementService } from "../../house-management.service";
 export class ViewHousesComponent implements OnInit, OnDestroy {
 
   // just test data
-  public houseList : Array<House> = [];
+  public houseList : Array<House> = [
+    {
+      _id : "aaaa",
+      address : "23 Nguyễn Bỉnh Khiêm Quận 1",
+      area : "Thành Phố Hồ Chí Minh",
+      sessionEnd : false,
+      bidStates : [],
+      createdDate : (new Date()).toIOString(),
+      endDate : new (new Date() + 864000000).toIOSring()
+    }
+  ];
 
   constructor(
     private router : Router,

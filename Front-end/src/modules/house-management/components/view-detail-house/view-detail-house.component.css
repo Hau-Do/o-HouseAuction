@@ -54,13 +54,13 @@
     width: 100%!important;
 }
 .product_gallery {
-    display: inline-block;
+    display: inline;
     margin: 5px -5px;
     width: 100%;
 }
 .single_product .product_thumb {
-    max-width: 72px;
-    max-height: 97px;
+    max-width: 100px;
+    max-height: 99px;
     overflow: hidden;
     border: solid 1px #ccc;
 }
@@ -95,6 +95,10 @@
 }
 .product_info .left, .product_info .right {
     padding-bottom: 10px;
+}
+
+.right-bid-btn {
+    float: right;
 }
 .info_field {
     font-family: 'Quark';

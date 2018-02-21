@@ -1,36 +1,36 @@
 <ng-template *ngIf="houseList && houseList.length > 0; else noResult">
     <!-- House #1 -->
-    <div class="row item-row">
+    <div class="row item-row" *ngFor="let house of houseList">
         <div class="col-12 col-sm-12 col-md-4 col-lg-4">
             <div class="row" style="border-bottom:0; border-right:1px solid #ecf0f1">
                 <div class="img-wrapper">
-                    <img class="portrait" src="//d2w0fkre85jr98.cloudfront.net/2017/5/201115429/201115429_20170526062529123_4.JPEG.X278.Y184.JPEG">
+                    <img class="portrait" src="{{house.avatar}}">
                 </div>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-8"> 
             <div class="row">
                 <address>
-                    <h2>Nguyen Du, District 1, Ho Chi Minh city</h2>
+                    <h2 [innerHtml] = "house.address"></h2>
                 </address>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-5 col-md-6 col-lg-6 text-center">
                     <div class="row">
-                        <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type">Single Family</span>                    
+                        <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12 type" [innerHtml] = "house.type"></span>                    
                     </div>
                     <div class="row">
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 beds">
-                            <span>4</span>
+                            <span [innerHtml] = "house.info.beds"></span>
                             <span class="item-fweight">Beds</span>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 baths">
                             <span>2</span>
-                            <span class="item-fweight">Baths</span>
+                            <span class="item-fweight" [innerHtml] = "house.info.baths"></span>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 sqMeter">
-                            <span>2,055</span>
-                            <span class="item-fweight ">Sq M</span>
+                            <span [innerHtml] = "house.info.sqMeter" ></span>
+                            <span class="item-fweight">Sq M</span>
                         </div>
                     </div>
                 </div>

@@ -196,3 +196,6 @@ address h2{
         border-bottom:1px solid #ecf0f1;
     }
 }
+.div-house-avatar {
+    padding-left: unset;
+}

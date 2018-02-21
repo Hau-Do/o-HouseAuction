@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
+import java.util.concurrent.TimeUnit;
 
 import org.bouncycastle.util.encoders.Hex;
 import org.web3j.crypto.CipherException;
@@ -21,6 +22,7 @@ import org.web3j.protocol.core.methods.response.Web3ClientVersion;
 import org.web3j.protocol.ipc.UnixIpcService;
 
 import lombok.extern.slf4j.Slf4j;
+import rx.Subscription;
 
 @Slf4j
 public class EthereumConnection {
@@ -33,7 +35,7 @@ public class EthereumConnection {
 		Web3ClientVersion web3ClientVersion = web3j.web3ClientVersion().send();
 		String clientVersion = web3ClientVersion.getWeb3ClientVersion();
 		log.info("Client version: {}", clientVersion);
-
+		
 		// Create an wallet
 		// String walletFileName = WalletUtils.generateFullNewWalletFile("baotoan123",
 		// new File("/home/baotoan/"));

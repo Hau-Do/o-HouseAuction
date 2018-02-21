@@ -34,6 +34,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
         	// you could add/remove a class for more advanced styling
         	// and enter/leave animation of the spinner
         	this.renderer.setElementStyle(this.spinnerElement.nativeElement, 'opacity', '1');
+        	this.renderer.setElementStyle(this.spinnerElement.nativeElement, 'pointer-events', 'auto');
         });
 	}
 
@@ -45,6 +46,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
 	      	// you could add/remove a class for more advanced styling
 	     	// and enter/leave animation of the spinner
 	     	this.renderer.setElementStyle(this.spinnerElement.nativeElement, 'opacity', '0');
+	     	this.renderer.setElementStyle(this.spinnerElement.nativeElement, 'pointer-events', 'none');
 	     });
     }
 

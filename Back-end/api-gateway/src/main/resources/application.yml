@@ -1,49 +1,20 @@
-server:
-  context-path: /web-app
-  port: 8080
-
-spring:
-  application:
-    name: api-gateway
-      
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
-      
-zuul:
-  routes:
-#    auth:
-#      path: /auth/**
-#      url: http://localhost:9999/auth/
-#      sensitive-headers:
-    account-service:
-      path: /account/**
-      url: http://localhost:1111
-      service-id: account-service
-    house-service:
-      path: /house/**
-      url: http://localhost:2222
-      service-id: house-service
-      
-#security:
-#  user:
-#    password: none
-#  oauth2:
-#    client:
-#      access-token-uri: http://localhost:8081/web-app/auth/oauth/token
-#      user-authorization-uri: http://localhost:8081/web-app/auth/oauth/authorize
-#      client-id: web-app
-#      pre-established-redirect-uri: http://localhost:8081/web-app/login
-#      registered-redirect-uri: http://localhost:8081/web-app/login
-#      use-current-uri: false
+#server:
+#  context-path: /web-app
+#  port: 8080
 #
-#    resource:
-#      jwt:
-#        keyValue: |
-#          -----BEGIN PUBLIC KEY-----     
-#          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwhaUQr/vf0TcEvsZBWODkO9yWLWFLETt0UInaVjnDgcBUK194W9OWvpoysVjwEfgZl1Vp3lUcFTyV8VTGBpvnueHkSqRAPiFOosKhaCidh8mJ9hzaLYc2L1d1EcQ87coBhOfBJqdsd+BG4EeS9UL0vSxO1j7kJnVpCf6PMB8jVnmUcb12nM6ZkVF94/vfBCcVeejLh05m/gHvIMjWxcgv0L9ZfJOkhRNqUKCYbfx5PwkedS8FwdOPWx/Gbu0bawSTRuKLfd3uEmo89V7KZPbRTNF1pNaD2+1DGluXqukh1/+4sPrqKg6k9JSQrS8zokj/ro7cwPQmOF9f724hWMgeQIDAQAB
-#          -----END PUBLIC KEY-----
-        
-        
-        
+#spring:
+#  application:
+#    name: api-gateway
+#      
+#zuul:
+#  routes:
+#    account-service:
+#      path: /oha-account/**
+#      sensitiveHeaders:
+#      service-id: account-service
+#    house-service:
+#      path: /oha-house/**
+#      sensitiveHeaders:
+#      service-id: house-service
+#        
+#        

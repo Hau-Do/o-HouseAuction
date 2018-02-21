@@ -80,3 +80,13 @@
 22:02:58.571094 db@open done T·132.557257ms
 23:28:06.734461 db@close closing
 23:28:06.734547 db@close done T·84.271µs
+=============== Feb 6, 2018 (+07) ===============
+21:24:54.225806 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:24:54.237497 version@stat F·[2 1] S·1KiB[486B 789B] Sc·[0.50 0.00]
+21:24:54.237544 db@open opening
+21:24:54.237714 journal@recovery F·1
+21:24:54.238561 journal@recovery recovering @19
+21:24:54.302372 memdb@flush created L0@21 N·2 S·243B "Blo..ion,v28":"Las..der,v29"
+21:24:54.303756 version@stat F·[3 1] S·1KiB[729B 789B] Sc·[0.75 0.00]
+21:24:54.381100 db@janitor F·6 G·0
+21:24:54.381188 db@open done T·143.618827ms

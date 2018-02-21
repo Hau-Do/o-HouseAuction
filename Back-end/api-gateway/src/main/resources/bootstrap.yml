@@ -1,5 +1,14 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:9090
+      # Specify configuration service to get it owner config
+      discovery:
+        service-id: oha-configuration-service
+        enabled: true
+      name: api-gateway
       profile: dev
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
