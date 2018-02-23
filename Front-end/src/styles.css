@@ -24,6 +24,9 @@ body{
 	-moz-box-sizing: inherit;
 	-webkit-box-sizing: inherit;
 }
+p{
+	word-break: break-word;
+}
 a[href]:not([class]) {
   color: #2980b9;
   text-decoration: underline;

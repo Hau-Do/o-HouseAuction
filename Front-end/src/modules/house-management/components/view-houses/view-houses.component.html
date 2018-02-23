@@ -1,4 +1,4 @@
-<ng-template *ngIf="houseList && houseList.length > 0; else noResult">
+<div *ngIf="houseList && houseList.length > 0; else noResult">
     <!-- House #1 -->
     <div class="row item-row" *ngFor="let house of houseList">
         <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -25,8 +25,8 @@
                             <span class="item-fweight">Beds</span>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 baths">
-                            <span>2</span>
-                            <span class="item-fweight" [innerHtml] = "house.info.baths"></span>
+                            <span [innerHtml] = "house.info.baths"></span>
+                            <span class="item-fweight">Baths</span>
                         </div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 sqMeter">
                             <span [innerHtml] = "house.info.sqMeter" ></span>
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-</ng-template>
+</div>
 <ng-template #noResult>
     <no-result-component [icon] = "'./assets/images/empty/no-house.svg'" [title]="'No house auction'" [body]="'There is no house auction now.'"></no-result-component>
 </ng-template>

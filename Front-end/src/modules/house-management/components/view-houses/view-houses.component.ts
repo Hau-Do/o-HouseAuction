@@ -18,11 +18,40 @@ export class ViewHousesComponent implements OnInit, OnDestroy {
     {
       _id : "aaaa",
       address : "23 Nguyễn Bỉnh Khiêm Quận 1",
-      area : "Thành Phố Hồ Chí Minh",
+      area : 1,
       sessionEnd : false,
       bidStates : [],
-      createdDate : (new Date()).toIOString(),
-      endDate : new (new Date() + 864000000).toIOSring()
+      createdDate : (new Date()).toISOString(),
+      endDate : (new Date(+new Date() + 864000000)).toISOString(),
+      startPrice : 0,
+      endPrice : 0,
+      owner : "Teo",
+      info : {
+        beds : 2,
+        baths : 2,
+        sqMeter : 200
+      },
+      type : "Nhà dân",
+      avatar : "./assets/images/inside4.png"
+    },
+    {
+      _id : "bbbb",
+      address : "23 Nguyễn Bỉnh Khiêm Quận 3",
+      area : 3,
+      sessionEnd : false,
+      bidStates : [],
+      createdDate : (new Date()).toISOString(),
+      endDate : (new Date(+new Date() + 864000000)).toISOString(),
+      startPrice : 0,
+      endPrice : 0,
+      owner : "Ti",
+      info : {
+        beds : 3,
+        baths : 5,
+        sqMeter : 600
+      },
+      type : "Nhà dân",
+      avatar : "./assets/images/inside5.jpg"
     }
   ];
 
