@@ -1,6 +1,3 @@
-spring:
-  application:
-    name: oha-uaa-service
 # Define the port where the UAA server would be running
 server:
   port: 9999
@@ -8,14 +5,14 @@ server:
   context-path: /uaa
   use-forward-headers: false
 
-# Define the Eureka server that handles service registration
-eureka:
-  instance:
-      hostname: localhost
-      port: 8888
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+## Define the Eureka server that handles service registration
+#eureka:
+#  instance:
+#      hostname: localhost
+#      port: 8888
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
 
 # Define security
 security:
@@ -26,7 +23,9 @@ security:
   ignored: /css/**,/js/**,/favicon.ico,/webjars/**
 
 logging:
-  level.org.springframework.security: DEBUG
+  level:
+    org.springframework.security: DEBUG
+    com.bidhouse: DEBUG
 
 ---
 spring:
