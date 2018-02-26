@@ -4,18 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 import com.bidhouse.listener.CascadeSaveMongoEventListener;
 
 @SpringBootApplication
 @EnableEurekaClient
+@EnableResourceServer
 public class AccountServiceApplication {
-//	discovery-service
-//	configuration-service
-//	api-gateway
-//	house-service
-//	account-service
-
 	public static void main(String[] args) {
 		SpringApplication.run(AccountServiceApplication.class, args);
 	}

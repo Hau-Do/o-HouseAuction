@@ -6,7 +6,7 @@
 	<groupId>com.bidhouse</groupId>
 	<artifactId>house-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>house-service</name>
 	<description>Bid House</description>
@@ -85,6 +85,11 @@
 			<version>2.6.1</version>
 			<scope>compile</scope>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
 	</dependencies>
 
 	<dependencyManagement>
