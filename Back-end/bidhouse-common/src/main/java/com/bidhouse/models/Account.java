@@ -23,5 +23,5 @@ public class Account {
 	@Indexed(unique = true)
 	private String username;
 	private String password;
-	private List<String> role;
+	private List<String> roles;
 }
