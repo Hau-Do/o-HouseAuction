@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiHost : "https://oha-discovery-service.cfapps.io/web-app/"
+  apiHost : "http://localhost:8080/web-app/"
 };

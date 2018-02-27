@@ -9,7 +9,7 @@ import { HouseManagementComponent } from './house-management.component';
 import { ViewHousesComponent } from './components/view-houses/view-houses.component';
 import { PostHouseComponent } from './components/post-house/post-house.component';
 import { ViewDetailHouseComponent } from './components/view-detail-house/view-detail-house.component';
-import { SharedModule } from "../../shared/components/shared.module";
+import { SharedModule } from "../../shared/shared.module";
 import { HouseManagementService } from './house-management.service';
 
 @NgModule({

@@ -12,8 +12,9 @@ import { NavBarComponent } from './snippets/navbar/navbar.component';
 import { MainMenuComponent } from "./snippets/main-menu/main-menu.component";
 import { FooterComponent } from "./snippets/footer/footer.component";
 import { PreFooterComponent } from "./snippets/pre-footer/pre-footer.component";
-import { SharedModule } from "./shared/components/shared.module";
+import { SharedModule } from "./shared/shared.module";
 import { AccountManagementModule } from "./modules/account-management/account-management.module";
+import { AuthGuard } from './_guards/auth.guard';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { AccountManagementModule } from "./modules/account-management/account-ma
         RouterModule,
         SharedModule
     ],
-    providers: [],
+    providers: [
+        AuthGuard
+    ],
     bootstrap: [AppComponent]
 })
 

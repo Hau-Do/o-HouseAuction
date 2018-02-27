@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 
 import { ACCOUNT_MANAGEMENT_ROUTE, ACCOUNT_MANAGEMENT_COMPONENT } from './account-management.routes';
 import { AccountManagementComponent } from './account-management.component';
@@ -13,10 +14,12 @@ import { AddressInformationComponent } from './components/check-out/adddress-inf
 
 import { AccountManagementService } from './account-management.service';
 
+import { CoreService } from '../../shared/services/core.service';
 
 @NgModule({
   imports: [
-    RouterModule.forChild(ACCOUNT_MANAGEMENT_ROUTE)
+    RouterModule.forChild(ACCOUNT_MANAGEMENT_ROUTE),
+    SharedModule
   ],
   declarations: [
     ACCOUNT_MANAGEMENT_COMPONENT,
@@ -28,4 +31,12 @@ import { AccountManagementService } from './account-management.service';
     AccountManagementService
   ]
 })
-export class AccountManagementModule { }
+export class AccountManagementModule { 
+
+  constructor(private core : CoreService, private router: Router){
+    if(this.core.getUserData()){
+      this.router.navigate(['/']);
+    }
+  }
+
+}

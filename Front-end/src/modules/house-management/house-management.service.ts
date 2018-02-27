@@ -5,6 +5,7 @@ import { Observable } from "rxjs/Rx";
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import { APIService } from "../../shared/services/api.service";
+import { CoreService } from "../../shared/services/core.service";
 
 @Injectable()
 export class HouseManagementService extends APIService{
@@ -12,8 +13,8 @@ export class HouseManagementService extends APIService{
 		"getHouse" : "house?page=$1&size=$2"
 	}
 
-	constructor(protected http : Http){
-		super(http);
+	constructor(protected http : Http, protected core : CoreService){
+		super(http, core);
 		this.apiHost += "oha-house/";
 	}
 

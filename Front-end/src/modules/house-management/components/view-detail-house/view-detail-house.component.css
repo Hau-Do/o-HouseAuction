@@ -21,42 +21,48 @@
     margin: 0 5px 1px;
 }
 .extended_view {
+    background:white;
     margin-bottom: 10px;
     padding-bottom: 10px;
     display: block;
     border: solid 1px #ccc;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
+    border-top: 5px solid #e74c3c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    -ms-border-top-left-radius: 5px;
+    -ms-border-top-right-radius: 5px;
+    -o-border-top-left-radius: 5px;
+    -o-border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .product_title {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 35px;
+    padding: 10px 20px;
+    font-weight: 700;
     display: block;
-    border-bottom: solid 1px #ccc;
 }
 .product_title a {
     color: #333;
 }
 .product_photo_wrp {
-    margin-left: 10px;
-    float: left;
-    width: 260px;
+    width: 100%;
+    margin-bottom : 35px;
 }
 .product_photo {
     display: inline-block;
+    vertical-align: top;
 }
 .zoomWrapper {
-    float: left;
     position: relative;
     width: 100%!important;
 }
 .product_gallery {
-    display: inline;
+    vertical-align: top;
+    display: inline-block;
     margin: 5px -5px;
-    width: 100%;
 }
 .single_product .product_thumb {
     max-width: 100px;
@@ -84,35 +90,23 @@
     margin: -1px 0 0 -1px;
 }
 .product_info {
-    display: inline-block;
-    padding-left: 8px;
-    padding-right: 10px;
-    width: 420px;
-}
-.product_info .left {
-    width: 45%;
-    float: left;
-}
-.product_info .left, .product_info .right {
-    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.right-bid-btn {
-    float: right;
-}
 .info_field {
     font-family: 'Quark';
     font-size: 16px;
 }
 .info_field {
-    color: #999;
+    font-weight: 700;
 }
 .current_bid, .timeout {
     min-height: 40px;
     padding: 5px 0;
     font-family: 'Open Sans',sans-serif;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .product_title .feed, .go-back-mobile, .info-product-right .current-winner>img {
