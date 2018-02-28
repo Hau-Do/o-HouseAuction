@@ -9,38 +9,38 @@ import { CoreService } from "../../shared/services/core.service";
 @Injectable()
 export class AccountManagementService extends APIService {
 	private apiName = {
-		getAccounts : "account"
+		getAccounts: "account"
 	}
 
-	constructor (protected http : Http, protected core : CoreService){
+	constructor(protected http: Http, protected core: CoreService) {
 		super(http, core);
 		this.apiHost += "oha-account/";
 		let defaults = [
 
 		];
 		let authInfos = [
-			{ Authorization : 'userData.accessToken'}
+			{ Authorization: 'userData.accessToken' }
 		]
 		this.initDefaultHeaders(defaults);
 		this.initAuthHeaders(authInfos);
 	}
 
-	getAccounts(){
+	getAccounts() {
 		let apiEndpoint = this.getApiEndpoint(this.apiName.getAccounts);
 		this.callAPI("GET", apiEndpoint).subscribe(
-			data =>{
+			data => {
 				console.log(data);
 			},
-			err =>{
+			err => {
 				console.log(err);
 			}
-			);
+		);
 	}
 
-	signin(data){
+	signin(data) {
 		console.log("Basic " + btoa(data.clientId + ":" + data.secret));
 		let headers = [
-			{Authorization : "Basic " + btoa(data.clientId + ":" + data.secret)}
+			{ Authorization: "Basic " + btoa(data.clientId + ":" + data.secret) }
 		];
 		delete data.clientId;
 		delete data.secret;
