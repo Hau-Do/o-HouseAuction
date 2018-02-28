@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit{
          secret : 'acmesecret',
          username : form.value.username,
          password : form.value.password,
-         grant_type : 'password'
+         grantType : 'password'
        }
        this.account.signin(data).subscribe((data)=>{
          console.log(data);

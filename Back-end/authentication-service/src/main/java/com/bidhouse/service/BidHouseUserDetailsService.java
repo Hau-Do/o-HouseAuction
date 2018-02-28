@@ -29,6 +29,7 @@ public class BidHouseUserDetailsService implements UserDetailsService {
 		if (account == null) {
 			throw new UsernameNotFoundException("User not found");
 		}
+		System.out.println(account.getRoles());
 		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
 		account.getRoles().forEach(role -> {
 			grantedAuthorities.add(new SimpleGrantedAuthority(role));

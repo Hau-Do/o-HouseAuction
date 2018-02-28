@@ -28,11 +28,11 @@ export class APIService {
     * @param {Boolean = false} authorize - api need authorize or not default : false
     * @param {any} data - body need to send to server
     */
-    public callAPI(method : string, apiEndpoint : string, data?:any, h?:Array<any>, authorize : Boolean = true){
+    public callAPI(method : string, apiEndpoint : string, data?:any, h?:Array<any>, authorize : Boolean = true, isJson: Boolean = true){
         let call;
         let headers = new Headers();
         if(authorize){
-            let accessToken = "";
+            let accessToken = (this.core && this.core.getUserData()) ? "Bearer " + this.core.getUserData().access_token : null;
             headers.append("Authorization", accessToken);
         }
         if(h){
@@ -40,11 +40,11 @@ export class APIService {
                 let headerKey = Object.keys(header)[0];
                 let headerValue = header[headerKey];
                 headers.append(headerKey, headerValue);
-                console.log(headerKey);
-                console.log(headerValue);
             });
         }
-        console.log(headers);
+        if(isJson){
+            headers.append("Content-Type", "application/json");
+        }
         switch (method) {
             case 'get':
             call = this.http.get(apiEndpoint, new RequestOptions({headers: headers}));

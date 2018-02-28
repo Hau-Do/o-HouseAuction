@@ -44,6 +44,6 @@ export class AccountManagementService extends APIService {
 		];
 		delete data.clientId;
 		delete data.secret;
-		return this.callAPI("post", "http://localhost:8080/uaa/oauth/token", data, headers, false);
+		return this.callAPI("post", "http://localhost:8080/uaa/oauth/token?grant_type=" + data.grantType + "&username=" + data.username + "&password=" + data.password, null, headers, false, false);
 	}
 }
