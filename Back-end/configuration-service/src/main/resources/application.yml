@@ -15,8 +15,7 @@ spring:
     config:
       server:
         native:
-          searchLocations: classpath:/common-config
-          
+          searchLocations: classpath:/common-config          
 eureka:
   client:
     service-url:

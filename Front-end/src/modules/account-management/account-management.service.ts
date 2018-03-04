@@ -11,6 +11,7 @@ export class AccountManagementService extends APIService {
 	private apiName = {
 		getAccounts: "account"
 	}
+	private returnUrl : string = "";
 
 	constructor(protected http: Http, protected core: CoreService) {
 		super(http, core);
@@ -44,6 +45,6 @@ export class AccountManagementService extends APIService {
 		];
 		delete data.clientId;
 		delete data.secret;
-		return this.callAPI("post", "http://localhost:8080/uaa/oauth/token?grant_type=" + data.grantType + "&username=" + data.username + "&password=" + data.password, null, headers, false, false);
+		return this.callAPI("post", this.getApiEndpoint("http://localhost:8080/uaa/oauth/token?grant_type=$1&username=$2&password=$3", [data.grant_type, data.username, data.password]), null, headers, false, "URL_ENCODED");
 	}
 }

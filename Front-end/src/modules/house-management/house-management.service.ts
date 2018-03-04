@@ -20,7 +20,7 @@ export class HouseManagementService extends APIService{
 
 	public getHouses(callback){
 		let apiEndpoint = this.getApiEndpoint(this.apiName.getHouse, [0,10]);
-		super.callAPI("GET", apiEndpoint).subscribe(res => {
+		this.callAPI("GET", apiEndpoint).subscribe(res => {
 			console.log(res);
 		},
 		err => {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { CoreService } from '../../shared/services/core.service';
 
 @Component({
     moduleId : module.id,
@@ -13,7 +14,8 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
     
     constructor(
-        private router: Router
+        private router: Router,
+        private core : CoreService
     ) {
         
     }
@@ -26,9 +28,8 @@ export class NavBarComponent implements OnInit {
         /**
          * clear session here
          */
-
+        this.core.lsRemoveAll();
          // need to get out 'view-house-component' !!!
-        this.router.navigate(['sign-in']);
-        console.log("log CMN out.");
+        this.router.navigate(['account/signin']);
     }
 }

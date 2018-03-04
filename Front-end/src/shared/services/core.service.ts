@@ -20,6 +20,9 @@ export class CoreService {
 			this.window = window;
 			this.$ = $;
 		}
+		if(!this.userData){
+			this.setUserData();
+		}
 	}
 
 	public lsSetItem(key, value){

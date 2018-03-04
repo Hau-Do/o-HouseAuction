@@ -6,6 +6,11 @@ import { CoreService } from './core.service';
 
 @Injectable()
 export class APIService {
+    private CONTENT_TYPE = {
+        JSON : "application/json",
+        URL_ENCODED : "application/x-www-form-urlencoded"
+    }
+
     protected apiHost: string = environment.apiHost;
     protected defaultHeaders: Array<Headers> = null;
     protected authHeaders: Array<Headers> = null;
@@ -22,13 +27,17 @@ export class APIService {
         this.authHeaders = new Array<Headers>();
     }
 
+    private refreshToken(){
+        
+    }
+
     /**
     * @param {string} method - api method
     * @param {string} path - api endpoint
     * @param {Boolean = false} authorize - api need authorize or not default : false
     * @param {any} data - body need to send to server
     */
-    public callAPI(method: string, apiEndpoint: string, data?: any, h?: Array<any>, authorize: Boolean = true, isJson: Boolean = true) {
+    public callAPI(method: string, apiEndpoint: string, data?: any, h?: Array<any>, authorize: Boolean = true, contentType : string = "JSON") {
         let call;
         let headers = new Headers();
         if (authorize) {
@@ -42,8 +51,8 @@ export class APIService {
                 headers.append(headerKey, headerValue);
             });
         }
-        if (isJson) {
-            headers.append("Content-Type", "application/json");
+        if (contentType && this.CONTENT_TYPE[contentType]) {
+            headers.append("Content-Type", this.CONTENT_TYPE[contentType]);
         }
         switch (method) {
             case 'get':
