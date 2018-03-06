@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-/**
- * @author Thibaud Leprêtre
- */
 class DynamicOauth2ClientContextFilter extends OAuth2ClientContextFilter {
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 

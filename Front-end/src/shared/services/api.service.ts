@@ -42,6 +42,7 @@ export class APIService {
         let headers = new Headers();
         if (authorize) {
             let accessToken = (this.core && this.core.getUserData()) ? "Bearer " + this.core.getUserData().access_token : null;
+            console.log(accessToken);
             headers.append("Authorization", accessToken);
         }
         if (h) {

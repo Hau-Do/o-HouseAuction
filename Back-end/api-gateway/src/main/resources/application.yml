@@ -3,6 +3,8 @@ spring:
     proxyTargetClass: true
   application:
     name: oha-api-gateway
+  mvc:
+    dispatch-options-request: true
 
 # Define the port where the API gateway server would be running
 server:
@@ -27,6 +29,7 @@ zuul:
     oha-account-service: /oha-account/**
     oha-house-service: /oha-house/**
   add-proxy-headers: true
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
 
 security:
   # Disable Spring Boot basic authentication
