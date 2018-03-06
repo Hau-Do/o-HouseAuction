@@ -6,6 +6,11 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.column {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
 #feed_list .left_col {
     width: 700px;
     float: left;
@@ -93,18 +98,12 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-
-.info_field {
-    font-family: 'Quark';
-    font-size: 16px;
-}
 .info_field {
     font-weight: 700;
 }
 .current_bid, .timeout {
     min-height: 40px;
     padding: 5px 0;
-    font-family: 'Open Sans',sans-serif;
     font-size: 32px;
     font-weight: 300;
 }
@@ -304,4 +303,12 @@ a:hover {
 
 #spanCountDown {
     font-size: 0.6em;
+}
+
+@media screen and (max-width : 425px){
+    .column{
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }
 }

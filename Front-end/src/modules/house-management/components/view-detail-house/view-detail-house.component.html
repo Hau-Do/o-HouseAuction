@@ -1,9 +1,12 @@
-<div class="go-back">                
-    <a href="/"><img>Đấu giá cho ngôi nhà khác.</a>
+<div class="go-back">
+    <a href="/">
+        <img>Đấu giá cho ngôi nhà khác.</a>
 </div>
 <div id="product_id_1" class="extended_view single_product">
     <h2 class="product_title">
-        <a id="ContentPlaceHolder1_lnkTitle"><span id="ContentPlaceHolder1_lbTitle">97/2 Nguyen Du, District 1, Ho Chi Minh City</span></a>
+        <a id="ContentPlaceHolder1_lnkTitle">
+            <span id="ContentPlaceHolder1_lbTitle">97/2 Nguyen Du, District 1, Ho Chi Minh City</span>
+        </a>
     </h2>
     <div id="ContentPlaceHolder1_UpdatePanel2">
         <div id="ContentPlaceHolder1_pBiddingInfo1" style="display: none" class="bidding_info_fail mbid_info fixed-mbid">
@@ -17,181 +20,285 @@
             </div>
         </div>
         <ul class="product_gallery col-md-6 col-xs-12 col-sm-12" id="gallery_id_60297">
-            <li><a id="ContentPlaceHolder1_aProduct1" class="product_thumb img72 active" ><img id="ContentPlaceHolder1_imgGallery1" src="assets/images/inside7.jpg"></a></li>
-            <li><a id="ContentPlaceHolder1_aProduct2" class="product_thumb img72"><img id="ContentPlaceHolder1_imgGallery2" src="assets/images/inside6.jpg"></a></li>
-            <li><a id="ContentPlaceHolder1_aProduct3" class="product_thumb img72"><img id="ContentPlaceHolder1_imgGallery3" src="assets/images/inside4.png"></a></li>
+            <li>
+                <a id="ContentPlaceHolder1_aProduct1" class="product_thumb img72 active">
+                    <img id="ContentPlaceHolder1_imgGallery1" src="assets/images/inside7.jpg">
+                </a>
+            </li>
+            <li>
+                <a id="ContentPlaceHolder1_aProduct2" class="product_thumb img72">
+                    <img id="ContentPlaceHolder1_imgGallery2" src="assets/images/inside6.jpg">
+                </a>
+            </li>
+            <li>
+                <a id="ContentPlaceHolder1_aProduct3" class="product_thumb img72">
+                    <img id="ContentPlaceHolder1_imgGallery3" src="assets/images/inside4.png">
+                </a>
+            </li>
         </ul>
     </div>
 
-    <div class="product_info container-fluid">
-        <div class="col-md-6 col-xs-12 col-sm-12">
-            <p class="info_field ends_in_label">Kết thúc trong</p>
-            <p class="timeout last_minute" style="height: 20px; color: rgb(204, 51, 85);"><span id="spanEndAuction"></span><span id="spanCountDown" class="timeout last_minute" style="color: rgb(204, 51, 85);"> 1 d:15 hrs:56 mins</span></p> 
+    <div class="product_info container-fluid column">
+        <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
+            <h4 class="info_field ends_in_label">Kết thúc trong</h4>
+            <hr>
+            <p class="timeout last_minute" style="height: 20px; color: rgb(204, 51, 85);">
+                <span id="spanEndAuction"></span>
+                <span id="spanCountDown" class="timeout last_minute" style="color: rgb(204, 51, 85);"> 1 d:15 hrs:56 mins</span>
+            </p>
         </div>
-        <div id="ContentPlaceHolder1_UpdatePanel1" class="col-md-6 col-xs-12 col-sm-12">
+        <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
             <div>
-                <p class="info_field current_bid_label">Giá thầu hiện tại</p>
+                <h4 class="info_field current_bid_label">Giá thầu hiện tại</h4>
+                <hr>
                 <p class="info_data current_bid">{{currentVal}} ETH</p>
             </div>
-            <div class="">
-                <span id="ContentPlaceHolder1_Timer1" style="visibility:hidden;display:none;"></span>
-                <p class="info_field place_bid_label">Đấu giá ngay: <!-- <a href="#view_faq" class="bidding_help">?</a> --> </p>
-                <div class="info_data place_bid" style="display: grid;">
-                    <span class="bidding_box">
-                        <span class="bid_box">
-                            <span class="minus box_puls_minus">
-                                <input class="slider_minus" type="button" value="-" (click)="updateVal(-1)" id="moins">
-                            </span>
-                            <span class="bid_text_number">
-                                <input name="ctl00$ContentPlaceHolder1$txtBidNew" [value]="biddingVal" maxlength="10" id="ContentPlaceHolder1_txtBidNew" type="tel" onblur="document.getElementById('ContentPlaceHolder1_txtBid').value = this.value" class="input_placebid" style="text-align: center;">
-                            </span>
-                            <span class="puls box_puls_minus">
-                                <input class="slider_plus" type="button" value="+" (click)="updateVal(1)" id="plus" onblur="biddingVal++">
-                            </span>
+
+            <div id="ContentPlaceHolder1_pnlJScountdown">
+
+                <input name="ctl00$ContentPlaceHolder1$txtJSend" type="text" value="12/24/2017 6:32:38 PM" id="ContentPlaceHolder1_txtJSend"
+                    style="color:White;border-color:White;border-style:None;width:10px;">
+                <input name="ctl00$ContentPlaceHolder1$txtDThen" type="text" value="12/24/2017 6:31:20 PM" id="ContentPlaceHolder1_txtDThen"
+                    style="color:White;border-color:White;border-style:None;width:10px;">
+                <script type="text/javascript">
+                    // TargetDate = document.getElementById('ctl00_ContentPlaceHolder1_txtJSend').value; // "12/31/2020 5:00 AM";
+                    // DBBOWDate = document.getElementById('ctl00_ContentPlaceHolder1_txtDThen').value;
+                    TargetDate = document.getElementById('ContentPlaceHolder1_txtJSend').value; // "12/31/2020 5:00 AM";
+                    DBBOWDate = document.getElementById('ContentPlaceHolder1_txtDThen').value;
+
+                    // alert(DBBOWDate);
+                    BackColor = "palegreen";
+                    ForeColor = "navy";
+                    CountActive = true;
+                    CountStepper = -1;
+                    DisplayFormat = "%%D%%d, %%H%%:%%M%%:%%S%%";
+                    FinishMessage = "It is finally here!";
+                </script>
+                <script type="text/javascript" src="/includes/countdown.js?1.2017.12.05"></script>
+
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
+            <span id="ContentPlaceHolder1_Timer1" style="visibility:hidden;display:none;"></span>
+            <h4 class="info_field place_bid_label">Đấu giá ngay
+                <!-- <a href="#view_faq" class="bidding_help">?</a> -->
+            </h4>
+            <hr>
+            <div class="info_data place_bid">
+                <div class="form-group">
+                    <div class="row">
+                        <span class="minus box_puls_minus col-md-1 col-xs-2 col-sm-2">
+                            <div class="row">
+                                <input class="slider_minus btn btn-danger" type="button" value="-" style="width:100%" (click)="updateVal(-1)" id="moins">
+                            </div>
                         </span>
-                    </span> 
-                    <script type="text/javascript">
-                        document.getElementById('ContentPlaceHolder1_txtBidNew').value = document.getElementById('ContentPlaceHolder1_txtBid').value;
-                    </script>
-                    <button type="button" class="btn btn-primary" (click)="bidNow(biddingVal)" style="margin: 4px 4em;">Bid Now</button>
-                    <p class="service_charge">2% fee (Seller pays at Closing)</p>
-                </div>
-                <div class="info-product-right">
-                    <p class="bidding_msg"></p>
-
-                                     <div class="current-winner">
-                                        <div class="left-winner-icon">
-                                        <img src="/Gfx/current_winner.jpg" alt="current_winner">
-                                        </div>
-                                        <div class="right-winner-name">
-                        	            <p class="info_field">Người thắng hiện tại</p>
-                        	            <p class="info_data"><span class="current_winner">kẹo.bông.199223 </span></p>
-                                        </div>
-                                        
-                                    </div>
-                                    <p id="ContentPlaceHolder1_pBiddingInfo" style="display:none" class="bidding_info_fail fbid_info">Giá mới trong phiên đấu giá!
-                                    Giá thầu tối thiểu tiếp theo: 616.000</p>
-                                    <p class="bidding_wait_msg"></p>
-                                </div>
-                                <span id="ContentPlaceHolder1_spanCurrentMaxBidOnAuction"></span>
-                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnIsFocusOnSizeDLL" id="hdnIsFocusOnSizeDLL" value="0">
-
-
+                        <span class="bid_text_number col-md-10 col-xs-8 col-sm-8">
+                            <input name="ctl00$ContentPlaceHolder1$txtBidNew" [value]="biddingVal" maxlength="10" id="ContentPlaceHolder1_txtBidNew"
+                                type="tel" onblur="document.getElementById('ContentPlaceHolder1_txtBid').value = this.value"
+                                class="input_placebid form-control" style="text-align: center;">
+                        </span>
+                        <span class="puls box_puls_minus  col-md-1 col-xs-2 col-sm-2">
+                            <div class="row">
+                                <input class="slider_plus btn btn-success" type="button" value="+" (click)="updateVal(1)" id="plus" style="width:100%" onblur="biddingVal++">
                             </div>
-
-                            <div id="ContentPlaceHolder1_pnlJScountdown">
-
-                                <input name="ctl00$ContentPlaceHolder1$txtJSend" type="text" value="12/24/2017 6:32:38 PM" id="ContentPlaceHolder1_txtJSend" style="color:White;border-color:White;border-style:None;width:10px;">
-                                <input name="ctl00$ContentPlaceHolder1$txtDThen" type="text" value="12/24/2017 6:31:20 PM" id="ContentPlaceHolder1_txtDThen" style="color:White;border-color:White;border-style:None;width:10px;">  
-                                <script type="text/javascript">
-                                            // TargetDate = document.getElementById('ctl00_ContentPlaceHolder1_txtJSend').value; // "12/31/2020 5:00 AM";
-                                            // DBBOWDate = document.getElementById('ctl00_ContentPlaceHolder1_txtDThen').value;
-                                            TargetDate = document.getElementById('ContentPlaceHolder1_txtJSend').value; // "12/31/2020 5:00 AM";
-                                            DBBOWDate = document.getElementById('ContentPlaceHolder1_txtDThen').value;
-
-                                            // alert(DBBOWDate);
-                                            BackColor = "palegreen";
-                                            ForeColor = "navy";
-                                            CountActive = true;
-                                            CountStepper = -1;
-                                            DisplayFormat = "%%D%%d, %%H%%:%%M%%:%%S%%";
-                                            FinishMessage = "It is finally here!";
-                                        </script>
-                                        <script type="text/javascript" src="/includes/countdown.js?1.2017.12.05"></script>
-
-                                    </div>
-                                </div> 
-
-                                <div class="go-back-mobile">                
-                                    <a href="/">Đấu giá cho sản phẩm khác. <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                       <!-- <div class="bid-slider">
-                            <input name="ctl00$ContentPlaceHolder1$bidSlider" type="text" id="ContentPlaceHolder1_bidSlider" data-slider="true" data-slider-snap="true" data-slider-highlight="true" data-slider-values="1,4,7,10,13,16,19,22,25,28,31,34,37,40,43,46,49,52,55,58,61" />
-                        </div>      -->                  
+                        </span>
+                        <button type="button" class="btn btn-primary col-md-offset-4 col-md-4 col-xs-12 col-sm-12" style="margin-top:8px; display:block"
+                            (click)="bidNow(biddingVal)">Bid Now</button>
+                        <script type="text/javascript">
+                            document.getElementById('ContentPlaceHolder1_txtBidNew').value = document.getElementById('ContentPlaceHolder1_txtBid').value;
+                        </script>
                     </div>
-                    
-                    <div class="service_condition">
-                        <!-- <div class="return_condition"><a href="#view_return_condition"><label>Trả lại sản phẩm</label></a></div> -->
-                        <!-- <div class="shipping_condition"><a href="#view_shipping_condition"><label>Giao hàng</label></a></div> -->
-                        <div class="payment_condition"><a href="#view_payment_condition"><label>Thanh toán</label></a></div>
-                        <!-- <p id="view_return_condition"><span id="ContentPlaceHolder1_lb342">chính sách hoàn trả trong 14 ngày áp dụng cho tất cả sản phẩm, cho phép bạn an tâm mua các thiết bị điện tử, quần áo, giày dép và hơn thế nữa. -->
+                </div>
+                <p class="text-center service_charge">2% fee (Seller pays at Closing)</p>
+            </div>
+            <span id="ContentPlaceHolder1_spanCurrentMaxBidOnAuction"></span>
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnIsFocusOnSizeDLL" id="hdnIsFocusOnSizeDLL" value="0">
+        </div>
+        <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
+            <p class="bidding_msg"></p>
+
+            <div class="current-winner">
+                <div class="right-winner-name">
+                    <h4 class="info_field">Người thắng hiện tại</h4>
+                    <hr>
+                    <p class="info_data">
+                        <span class="current_winner">kẹo.bông.199223 </span>
+                    </p>
+                </div>
+
+            </div>
+            <p id="ContentPlaceHolder1_pBiddingInfo" style="display:none" class="bidding_info_fail fbid_info">Giá mới trong phiên đấu giá! Giá thầu tối thiểu tiếp theo: 616.000</p>
+            <p class="bidding_wait_msg"></p>
+        </div>
+        <div class="go-back-mobile">
+            <a href="/">Đấu giá cho sản phẩm khác.
+                <i class="fa fa-angle-double-right"></i>
+            </a>
+        </div>
+        <!-- <div class="bid-slider">
+                            <input name="ctl00$ContentPlaceHolder1$bidSlider" type="text" id="ContentPlaceHolder1_bidSlider" data-slider="true" data-slider-snap="true" data-slider-highlight="true" data-slider-values="1,4,7,10,13,16,19,22,25,28,31,34,37,40,43,46,49,52,55,58,61" />
+                        </div>      -->
+    </div>
+
+    <div class="service_condition">
+        <!-- <div class="return_condition"><a href="#view_return_condition"><label>Trả lại sản phẩm</label></a></div> -->
+        <!-- <div class="shipping_condition"><a href="#view_shipping_condition"><label>Giao hàng</label></a></div> -->
+        <div class="payment_condition">
+            <a href="#view_payment_condition">
+                <label>Thanh toán</label>
+            </a>
+        </div>
+        <!-- <p id="view_return_condition"><span id="ContentPlaceHolder1_lb342">chính sách hoàn trả trong 14 ngày áp dụng cho tất cả sản phẩm, cho phép bạn an tâm mua các thiết bị điện tử, quần áo, giày dép và hơn thế nữa. -->
 
 
-                            <!-- Chú ý: Tất cả sản phẩm phải được hoàn trả trong tình trạng ban đầu. Khi đáp ứng được điều kiện hoàn trả, bạn sẽ được hoàn lại đầy đủ số tiền không bao gồm 10% phí dịch vụ. Người mua hàng sẽ chịu trách nhiệm cho phí vận chuyển hàng trả lại. </span></p> -->
-                            <p id="view_shipping_condition"><span id="ContentPlaceHolder1_lb343">Bạn sẽ nhận được kiện hàng trong vòng 1-3 ngày làm việc sau khi thanh toán thành công.
-                                Với mỗi hoá đơn, không kể số lượng sản phẩm bao gồm trong hoá đơn, bạn chỉ cần thanh toán 1 lần phí vận chuyển và 10% phí dịch vụ để đảm bảo kiện hàng của bạn được gửi nhanh chóng an toàn. 
-                                Phí dịch vụ không áp dụng cho các sản phẩm khuyến mãi có giá cố định.
-                            </span></p>
-                            <p id="view_payment_condition"><span id="ContentPlaceHolder1_lb344">Chúng tôi cung cấp phương thức thanh toán thuận tiện và an toàn đối với những thanh toán trực tuyến bằng thẻ Visa hoặc Master</span></p>
-                        </div>
+        <!-- Chú ý: Tất cả sản phẩm phải được hoàn trả trong tình trạng ban đầu. Khi đáp ứng được điều kiện hoàn trả, bạn sẽ được hoàn lại đầy đủ số tiền không bao gồm 10% phí dịch vụ. Người mua hàng sẽ chịu trách nhiệm cho phí vận chuyển hàng trả lại. </span></p> -->
+        <p id="view_shipping_condition">
+            <span id="ContentPlaceHolder1_lb343">Bạn sẽ nhận được kiện hàng trong vòng 1-3 ngày làm việc sau khi thanh toán thành công. Với mỗi hoá đơn, không
+                kể số lượng sản phẩm bao gồm trong hoá đơn, bạn chỉ cần thanh toán 1 lần phí vận chuyển và 10% phí dịch vụ
+                để đảm bảo kiện hàng của bạn được gửi nhanh chóng an toàn. Phí dịch vụ không áp dụng cho các sản phẩm khuyến
+                mãi có giá cố định.
+            </span>
+        </p>
+        <p id="view_payment_condition">
+            <span id="ContentPlaceHolder1_lb344">Chúng tôi cung cấp phương thức thanh toán thuận tiện và an toàn đối với những thanh toán trực tuyến bằng thẻ
+                Visa hoặc Master</span>
+        </p>
+    </div>
 
-                        <div id="ContentPlaceHolder1_UpdatePanel3">
-                            <div id="view_history">
-                                <ul class="bidding_history">
-                                    <li class="history_heading">
-                                        <span class="bid_user">Tài khoản</span>
-                                        <span class="bid_amount">Giá dự thầu</span>
-                                        <span class="bid_total">Tổng giá thầu</span>
-                                        <span class="bid_time">Thời gian đấu giá</span>
-                                    </li>
-                                    <li class="history_rows odd">
-                                        <span class="bid_user current_winner pro_user">kẹo.bông.199223  </span>
-                                        <span class="bid_amount">114 ETH</span>
-                                        <span class="bid_total">1</span>
-                                        <span class="bid_time">24-12-2017 18:31:15 </span>
-                                    </li>
+    <div id="ContentPlaceHolder1_UpdatePanel3">
+        <div id="view_history">
+            <ul class="bidding_history">
+                <li class="history_heading">
+                    <span class="bid_user">Tài khoản</span>
+                    <span class="bid_amount">Giá dự thầu</span>
+                    <span class="bid_total">Tổng giá thầu</span>
+                    <span class="bid_time">Thời gian đấu giá</span>
+                </li>
+                <li class="history_rows odd">
+                    <span class="bid_user current_winner pro_user">kẹo.bông.199223 </span>
+                    <span class="bid_amount">114 ETH</span>
+                    <span class="bid_total">1</span>
+                    <span class="bid_time">24-12-2017 18:31:15 </span>
+                </li>
 
-                                    <span id="ContentPlaceHolder1_lbListOfBids"><li class="history_rows even"><span class="bid_user">nam.nguyen.729809  </span><span class="bid_amount">112 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:12 </span></li><li class="history_rows odd"><span class="bid_user">huyên.nguyễn.110106  </span><span class="bid_amount">111 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:07 </span></li><li class="history_rows even"><span class="bid_user">thach.do.198697  </span><span class="bid_amount">110 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:00 </span></li><li class="history_rows odd"><span class="bid_user">văn nhật.hoàng.349079  </span><span class="bid_amount">109 ETH</span><span class="bid_total">1</span><span class="bid_time">24-12-2017 18:31:08 </span></li></span>
-
-
-                                </ul>
-                            </div>
-                        </div>   
-
-
-                        <div class="product_details">
-                            <a href="#view_history" id="show_history">Ẩn lịch sử đấu giá</a>
-                            <ul class="product_details_tab">
-                                <li><a href="#view_details" id="show_details" class="active">Chi tiết sản phẩm</a></li>
-                                <li><a href="#view_faq" id="show_faq">FAQ</a></li>
-                            </ul>
-                            <div id="view_details">
-                                <h3>Chi tiết sản phẩm</h3>
-                                <table width="230" cellspacing="1" cellpadding="1">
-
-                                    <tbody><tr>
-                                        <td>Phiên đấu giá số</td>
-                                        <td id="litAuctionId">102890461</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Sản phẩm số </td>
-                                        <td>73-157</td>
-                                    </tr>
-                                </tbody></table>
+                <span id="ContentPlaceHolder1_lbListOfBids">
+                    <li class="history_rows even">
+                        <span class="bid_user">nam.nguyen.729809 </span>
+                        <span class="bid_amount">112 ETH</span>
+                        <span class="bid_total">1</span>
+                        <span class="bid_time">24-12-2017 18:31:12 </span>
+                    </li>
+                    <li class="history_rows odd">
+                        <span class="bid_user">huyên.nguyễn.110106 </span>
+                        <span class="bid_amount">111 ETH</span>
+                        <span class="bid_total">1</span>
+                        <span class="bid_time">24-12-2017 18:31:07 </span>
+                    </li>
+                    <li class="history_rows even">
+                        <span class="bid_user">thach.do.198697 </span>
+                        <span class="bid_amount">110 ETH</span>
+                        <span class="bid_total">1</span>
+                        <span class="bid_time">24-12-2017 18:31:00 </span>
+                    </li>
+                    <li class="history_rows odd">
+                        <span class="bid_user">văn nhật.hoàng.349079 </span>
+                        <span class="bid_amount">109 ETH</span>
+                        <span class="bid_total">1</span>
+                        <span class="bid_time">24-12-2017 18:31:08 </span>
+                    </li>
+                </span>
 
 
-                                <h3>Mô tả sản phẩm</h3>
-                                <p>...............................................................................................</p>
-                                <p>...............................................................................................</p>
-                                <p>...............................................................................................</p>
-                            <!-- <p><span id="ContentPlaceHolder1_lbDescription">Sản phẩm Smartphone Zip Mobile Zip9 ghi điểm bởi phong cách thiết kế tinh tế, trang nhã, vỏ được phủ sơn kim loại sáng bóng, kích thước nhỏ gọn, vừa tay và hiệu suất đảm bảo cho các hoạt động cơ bản thường ngày như lướt web, nghe nhạc, xem phim...Còn chần chừ gì mà không tậu ngay một chiếc cho mình. Mua ngay!</span></p>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="product_details">
+        <a href="#view_history" id="show_history">Ẩn lịch sử đấu giá</a>
+        <ul class="product_details_tab">
+            <li>
+                <a href="#view_details" id="show_details" class="active">Chi tiết sản phẩm</a>
+            </li>
+            <li>
+                <a href="#view_faq" id="show_faq">FAQ</a>
+            </li>
+        </ul>
+        <div id="view_details">
+            <h3>Chi tiết sản phẩm</h3>
+            <table width="230" cellspacing="1" cellpadding="1">
+
+                <tbody>
+                    <tr>
+                        <td>Phiên đấu giá số</td>
+                        <td id="litAuctionId">102890461</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sản phẩm số </td>
+                        <td>73-157</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Mô tả sản phẩm</h3>
+            <p>...............................................................................................</p>
+            <p>...............................................................................................</p>
+            <p>...............................................................................................</p>
+            <!-- <p><span id="ContentPlaceHolder1_lbDescription">Sản phẩm Smartphone Zip Mobile Zip9 ghi điểm bởi phong cách thiết kế tinh tế, trang nhã, vỏ được phủ sơn kim loại sáng bóng, kích thước nhỏ gọn, vừa tay và hiệu suất đảm bảo cho các hoạt động cơ bản thường ngày như lướt web, nghe nhạc, xem phim...Còn chần chừ gì mà không tậu ngay một chiếc cho mình. Mua ngay!</span></p>
                             <p></p><p></p>
                             <p><span id="ContentPlaceHolder1_lbProductFacts">Đặc điểm sản phẩm:<br><br>- Mẫu: ZIP9<br>- Màn hình IPS 4.5 inch QHD, với độ phân giải 480 x 854 pixel<br>- Hệ điều hành: Android OS 4.4.2<br>- Số SIM: 2<br>- Chipset MTK 6572 Dual core<br>- Tốc độ CPU: 1.3 Ghz<br>- Camera sau: 2.0 MP<br>- Camera trước: 0.3 MP<br>- ROM: 4 GB<br>- RAM: 512MB<br>- Dung lượng pin: 1500 mAh<br>- Kích thước: 115.5 x 62 x 9.6 mm<br>- Trọng lượng: 125 gr<br>- Băng tần GSM 900/1800<br>- Có 4 màu bắt kịp xu hướng cho bạn dễ dàng lựa chọn: Đỏ/Bạc/Hồng vàng/ Vàng<br>- Có tặng kèm ốp lưng cao cấp<br>- Hộp sản phẩm bao gồm:<br>Thân máy, sạc, pin, tai nghe, cáp USB, sách hướng dẫn<br>- Bảo hành 12 tháng<br>- Thiết kế vỏ ngoài được phủ sơn kim loại sáng bóng, đem lại dáng vẻ sang trọng và đẹp mắt cho người dùng<br>- Kích thước nhỏ gọn, các góc được bo tròn giúp cầm nắm dễ dàng, vừa tay<br>- Có trang bị phím Home vật lý, tăng cường tính tiện dụng<br>- Tích hợp chipset MTK 6572 Dual core 1.3Ghz, RAM 512 MB và ROM 4GB cho khả năng xử lý tác vụ nhanh chóng và ổn định.<br>- Màn hình 4.5 inch rộng rãi cùng độ phân giải tương thích, giúp cho hình ảnh được hiển thị sống động, tinh tế<br>- Khả năng cảm ứng cực nhạy, giúp hỗ trợ tốt người dùng trong công việc lẫn những lúc giải trí<br>- Sản xuất tại Trung Quốc<br></span> </p> -->
 
 
-                        </div>
-                        <div id="view_faq">
-                            Khi giá thầu của bạn cao hơn giá thầu tối thiểu, hệ thống sẽ tự động đấu giá cho bạn. Lưu ý chúng tôi sẽ không bao giờ đấu giá cao hơn giá bạn đã đưa ra.<br><br>Hệ thống được thiết kế để giữ tiền cho bạn và cung cấp cho bạn cơ hội thắng đấu giá cao nhất với mức giá thấp nhất.<br><br>Với phương thức này bạn sẽ quyết định được mức giá tối đa bạn sẵn sàng trả cho sản phẩm và vẫn có cơ hội để thắng với mức giá thấp hơn mức giá tối đa mà bạn đã đưa ra.<br><br>Dưới đây là 1 ví dụ:<br><br>Một người dùng khác (Tạm gọi là Người Dùng 1) đưa ra giá thầu là 200k VND<br><br>Giá thầu của bạn là 300k VND.<br><br>Thay vì đấu giá với giá là 300k VND, thuật toán của chúng tôi sẽ điều chỉnh giá thầu của bạn xuống còn 200k VND.<br><br>Người Dùng 1 đưa ra giá thầu là 250k VND<br><br>Hệ thống của chúng tôi sẽ tự động đấu giá với mức giá bằng 250K VND cho bạn, bởi bạn đã đăng ký giá thầu tối đa mà bạn muốn trả cho sản phẩm là 300K VND.<br><br>Bạn vẫn sẽ thắng thầu với mức giá 250k VND.<br><br>Người Dùng 1 lại đưa ra giá thầu mới là 300k VND, bằng với giá đầu lúc đầu của bạn. Trong trường hợp này, hệ thống sẽ tự động khớp giá thầu của Người Dùng 1 và bạn vẫn là người thắng thầu với mức giá 300k VND<br><br>Chiến lược tốt là đưa ra một giá thầu tối đa cao từ ban đầu, như vậy bạn sẽ có cơ hội thắng thầu cao hơn, đặc biệt khi người dùng khác khớp với giá thầu của bạn<br><br>Người Dùng 1 đưa ra giá thầu mới là 310k VND<br><br>Bạn đã bị đấu giá cao hơn và Người Dùng 1 đang giữ lợi thế thắng cuộc. Nếu bạn muốn đưa ra giá thầu mới để thắng thầu bạn sẽ cần phải đưa ra giá thầu cao hơn 310k VND<br><br>Như vậy bạn có thể thắng, ohouseacution được thiết kế để bạn có thể thắng đấu giá với giá tốt nhất.<br>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div id="view_faq">
+            Khi giá thầu của bạn cao hơn giá thầu tối thiểu, hệ thống sẽ tự động đấu giá cho bạn. Lưu ý chúng tôi sẽ không bao giờ đấu
+            giá cao hơn giá bạn đã đưa ra.
+            <br>
+            <br>Hệ thống được thiết kế để giữ tiền cho bạn và cung cấp cho bạn cơ hội thắng đấu giá cao nhất với mức giá thấp
+            nhất.
+            <br>
+            <br>Với phương thức này bạn sẽ quyết định được mức giá tối đa bạn sẵn sàng trả cho sản phẩm và vẫn có cơ hội để thắng
+            với mức giá thấp hơn mức giá tối đa mà bạn đã đưa ra.
+            <br>
+            <br>Dưới đây là 1 ví dụ:
+            <br>
+            <br>Một người dùng khác (Tạm gọi là Người Dùng 1) đưa ra giá thầu là 200k VND
+            <br>
+            <br>Giá thầu của bạn là 300k VND.
+            <br>
+            <br>Thay vì đấu giá với giá là 300k VND, thuật toán của chúng tôi sẽ điều chỉnh giá thầu của bạn xuống còn 200k VND.
+            <br>
+            <br>Người Dùng 1 đưa ra giá thầu là 250k VND
+            <br>
+            <br>Hệ thống của chúng tôi sẽ tự động đấu giá với mức giá bằng 250K VND cho bạn, bởi bạn đã đăng ký giá thầu tối
+            đa mà bạn muốn trả cho sản phẩm là 300K VND.
+            <br>
+            <br>Bạn vẫn sẽ thắng thầu với mức giá 250k VND.
+            <br>
+            <br>Người Dùng 1 lại đưa ra giá thầu mới là 300k VND, bằng với giá đầu lúc đầu của bạn. Trong trường hợp này, hệ
+            thống sẽ tự động khớp giá thầu của Người Dùng 1 và bạn vẫn là người thắng thầu với mức giá 300k VND
+            <br>
+            <br>Chiến lược tốt là đưa ra một giá thầu tối đa cao từ ban đầu, như vậy bạn sẽ có cơ hội thắng thầu cao hơn, đặc
+            biệt khi người dùng khác khớp với giá thầu của bạn
+            <br>
+            <br>Người Dùng 1 đưa ra giá thầu mới là 310k VND
+            <br>
+            <br>Bạn đã bị đấu giá cao hơn và Người Dùng 1 đang giữ lợi thế thắng cuộc. Nếu bạn muốn đưa ra giá thầu mới để thắng
+            thầu bạn sẽ cần phải đưa ra giá thầu cao hơn 310k VND
+            <br>
+            <br>Như vậy bạn có thể thắng, ohouseacution được thiết kế để bạn có thể thắng đấu giá với giá tốt nhất.
+            <br>
+        </div>
+    </div>
+</div>
 
-                <ul id="watching_list" class="product_list">
+<ul id="watching_list" class="product_list">
 
-                </ul>
+</ul>
 
-            <!-- <div class="right_col">
+<!-- <div class="right_col">
 
                 <div style="padding-bottom:15px;">
                      
