@@ -21,7 +21,7 @@ import lombok.Setter;
 @Document(collection = "bid_states")
 public class BidState {
 	@Id
-	private ObjectId id;
+	private String id;
 	private Date bidTime;
 	@DBRef(db = "users")
 	@CascadeSave

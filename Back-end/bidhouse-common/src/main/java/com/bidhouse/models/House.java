@@ -3,7 +3,6 @@ package com.bidhouse.models;
 import java.util.Date;
 import java.util.List;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -22,9 +21,9 @@ import lombok.Setter;
 @Document(collection = "houses")
 public class House {
 	@Id
-	private ObjectId id;
+	private String id;
 	private String address;
-	private ObjectId owner;
+	private String owner;
 	private double area;
 	private double startPrice;
 	private double endPrice;

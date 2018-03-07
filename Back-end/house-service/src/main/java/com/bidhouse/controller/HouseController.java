@@ -1,6 +1,5 @@
 package com.bidhouse.controller;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -42,7 +41,7 @@ public class HouseController {
 	}
 
 	@RequestMapping(value = "/{houseId}", method = RequestMethod.GET)
-	public ResponseEntity<House> house(@PathVariable("houseId") ObjectId houseId) {
+	public ResponseEntity<House> house(@PathVariable("houseId") String houseId) {
 		House account = houseRepository.findOne(houseId);
 		if (account != null) {
 			return new ResponseEntity<>(account, HttpStatus.OK);

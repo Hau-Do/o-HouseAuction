@@ -1,6 +1,5 @@
 package com.bidhouse.controller;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -37,7 +36,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-	public ResponseEntity<User> user(@PathVariable("userId") ObjectId userId) {
+	public ResponseEntity<User> user(@PathVariable("userId") String userId) {
 		User user = userRepository.findOne(userId);
 		if(user != null) {
 			return new ResponseEntity<User>(user, HttpStatus.OK);
