@@ -1,6 +1,5 @@
 package com.bidhouse.controller;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -40,7 +39,7 @@ public class AccountController {
 	}
 
 	@RequestMapping(value = "/{accountId}", method = RequestMethod.GET)
-	public ResponseEntity<Account> account(@PathVariable("accountId") ObjectId accountId) {
+	public ResponseEntity<Account> account(@PathVariable("accountId") String accountId) {
 		Account account = accountRepository.findOne(accountId);
 		if (account != null) {
 			return new ResponseEntity<>(account, HttpStatus.OK);

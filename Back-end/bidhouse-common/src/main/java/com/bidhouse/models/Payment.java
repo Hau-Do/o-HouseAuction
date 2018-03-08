@@ -2,7 +2,6 @@ package com.bidhouse.models;
 
 import java.util.Date;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,7 +18,7 @@ import lombok.Setter;
 @Document(collection = "payments")
 public class Payment {
 	@Id
-	private ObjectId id;
+	private String id;
 	@DBRef(db = "users")
 	private User userId;
 	@DBRef(db = "houses")
