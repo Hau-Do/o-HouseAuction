@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { House } from '../../../../shared/models/house';
 import { HouseManagementService } from "../../house-management.service";
+import { Pagination } from "../../../../shared/models/pagination";
 
 @Component({
   selector: 'view-houses-component',
@@ -63,8 +64,18 @@ export class ViewHousesComponent implements OnInit, OnDestroy {
   }
 
   getHouses(){
-    this.houseManagementService.getHouses(function(houses){
-      console.log(houses);
+    this.houseManagementService.getHouses((res, err) => {
+      let pagination : Pagination = res;
+      // this.houseList = pagination.content;
+      // this.houseList.map( house => {
+      //   house.avatar = "https://picsum.photos/900/600/?random"
+      //   house.info = {
+      //     beds : 2,
+      //     baths : 2,
+      //     sqMeter : 100
+      //   }
+      //   house.type = "Nhà dân";
+      // })
     });
   }
 

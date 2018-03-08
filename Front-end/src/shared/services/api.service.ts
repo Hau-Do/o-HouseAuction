@@ -34,7 +34,7 @@ export class APIService {
     /**
     * @param {string} method - api method
     * @param {string} path - api endpoint
-    * @param {Boolean = false} authorize - api need authorize or not default : false
+    * @param {Boolean = true} authorize - api need authorize or not default : true
     * @param {any} data - body need to send to server
     */
     public callAPI(method: string, apiEndpoint: string, data?: any, h?: Array<any>, authorize: Boolean = true, contentType : string = "JSON") {
@@ -42,7 +42,6 @@ export class APIService {
         let headers = new Headers();
         if (authorize) {
             let accessToken = (this.core && this.core.getUserData()) ? "Bearer " + this.core.getUserData().access_token : null;
-            console.log(accessToken);
             headers.append("Authorization", accessToken);
         }
         if (h) {
@@ -76,19 +75,13 @@ export class APIService {
         }
         if (call) {
             return call.map(res => {
-                if (res._body !== "" && res._body !== null) {
-                    res._body = '{"data" : ' + res._body + ', "status" : ' + res.status + '}';
-                    let result = res.json();
-                    if (result && result.data && result.data.name === "MongoError") {
-                        let error = {
-                            status: 500,
-                            statusText: result["name"] + " : " + result["message"]
-                        }
-                        return Observable.of(error);
-                    }
-                    return result.data;
+                if(res.status === 200){
+                    let data = res.json();
+                    return data;
                 }
-
+                else if(res.status === 204){
+                    return null;
+                }
             }).catch((error) => {
                 if (error.status === 0) {
                     error.status = 504;

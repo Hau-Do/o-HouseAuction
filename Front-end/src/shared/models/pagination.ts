@@ -1,14 +1,15 @@
-export class pagination {
-	protected first : boolean;
-	protected last : boolean;
-	protected totalPages : number;
-	protected totalElements : number;
-	protected size : number;
-	protected number : number;
-	protected sort : any;
-	protected content : Array<object>;
+import { House } from "./house";
+export class Pagination {
+	public first : boolean;
+	public last : boolean;
+	public totalPages : number;
+	public totalElements : number;
+	public size : number;
+	public number : number;
+	public sort : any;
+	public content : Array<House>;
 
-	constructor(first? : boolean, last? : boolean, totalPages? : number, totalElements? : number, size? : number, number? : number, sort? : any, content? : Array<object>){
+	constructor(first? : boolean, last? : boolean, totalPages? : number, totalElements? : number, size? : number, number? : number, sort? : any, content? : Array<House>){
 		this.first = first === null ? true : first;
 		this.last = last === null ? true : last;
 		this.totalElements = totalElements === null ? 0 : totalElements;

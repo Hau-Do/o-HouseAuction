@@ -21,10 +21,14 @@ export class HouseManagementService extends APIService{
 	public getHouses(callback){
 		let apiEndpoint = this.getApiEndpoint(this.apiName.getHouse, [0,10]);
 		this.callAPI("GET", apiEndpoint).subscribe(res => {
-			console.log(res);
+			callback(res, null);
 		},
 		err => {
-			console.log(err);
+			callback(null, err);
 		});
+	}
+
+	public getHouse(houseId, callback){
+		let apiEndpoint = this.getApiEndpoint(this.apiName.getHouse, houseId);
 	}
 }
