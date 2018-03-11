@@ -99,8 +99,16 @@ export class APIService {
                 apiEndpoint = apiEndpoint.replace("$" + (i + 1), params[i]);
             }
         }
-        if (!path.startsWith("http"))
-            apiEndpoint = this.apiHost + apiEndpoint.replace(/\/\//g, "\/").replace("\/", "");
+        if (!path.startsWith("http")){
+            if(apiEndpoint.indexOf("/") === 0)
+                apiEndpoint = apiEndpoint.substr(1, apiEndpoint.length);
+            else if(apiEndpoint.lastIndexOf("/") === apiEndpoint.length - 1)
+                apiEndpoint = apiEndpoint.substr(0, apiEndpoint.length - 1);
+            if(this.apiHost.lastIndexOf("/") === this.apiHost.length - 1)
+                apiEndpoint = this.apiHost + apiEndpoint;
+            else
+                apiEndpoint = this.apiHost + "/" + apiEndpoint;
+        }
         return apiEndpoint;
     }
 

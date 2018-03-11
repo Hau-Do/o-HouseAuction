@@ -5,8 +5,10 @@ export class House {
     public area : number;
     public sessionEnd : boolean;
     public bidStates : Array<object>;
-    public createdDate : string;
-    public endDate : string;
+    public createdDate : Date;
+    public endDate : Date;
+    public timeLeft : Date;
+    public displayTimeLeft : any;
     public startPrice : number;
     public endPrice : number;
     public owner : string;
@@ -21,8 +23,10 @@ export class House {
         this.area = 0;
         this.sessionEnd = false;
         this.bidStates = [];
-        this.createdDate = (new Date()).toISOString();
-        this.endDate = (new Date()).toISOString();
+        this.createdDate = new Date();
+        this.endDate = new Date();
+        this.timeLeft = new Date(+this.endDate - +this.createdDate);
+        this.displayTimeLeft = [];
         this.startPrice = 0;
         this.endPrice = 0;
         this.owner = "";

@@ -14,6 +14,8 @@ import { FooterComponent } from "./snippets/footer/footer.component";
 import { PreFooterComponent } from "./snippets/pre-footer/pre-footer.component";
 import { SharedModule } from "./shared/shared.module";
 import { AccountManagementModule } from "./modules/account-management/account-management.module";
+import { APIService } from './shared/services/api.service';
+import { CoreService } from './shared/services/core.service';
 import { AuthGuard } from './_guards/auth.guard';
 
 
@@ -38,6 +40,8 @@ import { AuthGuard } from './_guards/auth.guard';
         SharedModule
     ],
     providers: [
+        APIService,
+        CoreService,
         AuthGuard
     ],
     bootstrap: [AppComponent]

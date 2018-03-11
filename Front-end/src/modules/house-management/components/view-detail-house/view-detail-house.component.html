@@ -44,7 +44,7 @@
             <hr>
             <p class="timeout last_minute" style="height: 20px; color: rgb(204, 51, 85);">
                 <span id="spanEndAuction"></span>
-                <span id="spanCountDown" class="timeout last_minute" style="color: rgb(204, 51, 85);"> 1 d:15 hrs:56 mins</span>
+                <span id="spanCountDown" class="timeout last_minute" style="color: rgb(204, 51, 85);">{{currentHouse?.dispalyTimeLeft?.day}} D : {{currentHouse?.dispalyTimeLeft?.hour}} HRS : {{currentHouse?.dispalyTimeLeft?.minute}} MINS</span>
             </p>
         </div>
         <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
@@ -54,7 +54,7 @@
                 <p class="info_data current_bid">{{currentVal}} ETH</p>
             </div>
 
-            <div id="ContentPlaceHolder1_pnlJScountdown">
+            <!-- <div id="ContentPlaceHolder1_pnlJScountdown">
 
                 <input name="ctl00$ContentPlaceHolder1$txtJSend" type="text" value="12/24/2017 6:32:38 PM" id="ContentPlaceHolder1_txtJSend"
                     style="color:White;border-color:White;border-style:None;width:10px;">
@@ -76,7 +76,7 @@
                 </script>
                 <script type="text/javascript" src="/includes/countdown.js?1.2017.12.05"></script>
 
-            </div>
+            </div> -->
         </div>
         <div class="col-md-12 col-xs-12 col-sm-12" style="margin-top:15px; min-height:230px">
             <span id="ContentPlaceHolder1_Timer1" style="visibility:hidden;display:none;"></span>

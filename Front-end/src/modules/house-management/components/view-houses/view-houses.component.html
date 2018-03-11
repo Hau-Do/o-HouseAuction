@@ -42,11 +42,11 @@
                         <table width="100%">
                             <tbody>
                                 <tr class="counter Orange">
-                                    <td>1</td>
+                                    <td [innerHtml] = "house.displayTimeLeft?.day"></td>
                                     <td valign="middle">:</td>
-                                    <td>15</td>
+                                    <td [innerHtml] = "house.displayTimeLeft?.hour"></td>
                                     <td valign="middle">:</td>
-                                    <td>56</td>
+                                    <td [innerHtml] = "house.displayTimeLeft?.minute"></td>
                                 </tr>
                                 <tr class="item-fweight">
                                     <td>DAY</td>
@@ -67,12 +67,14 @@
                         <div class="current-bid">$107,000</div>
                     </div>
                     <div class="row">
-                        <a type="button" [routerLink] = "['/house/123']" class="btn btn-warning details flat">View Details</a>
+                        <a type="button" [routerLink] = "['/house/' + house.id]" class="btn btn-warning details flat">View Details</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- <pagination-cmp></pagination-cmp> -->
 </div>
 <ng-template #noResult>
     <no-result-component [icon] = "'./assets/images/empty/no-house.svg'" [title]="'No house auction'" [body]="'There is no house auction now.'"></no-result-component>
