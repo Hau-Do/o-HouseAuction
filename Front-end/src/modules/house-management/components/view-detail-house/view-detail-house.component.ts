@@ -13,8 +13,7 @@ import { House } from "../../../../shared/models/house";
 export class ViewDetailHouseComponent {
 
 
-  private currentVal: number = 114;
-  private biddingVal: number = 115;
+  public biddingVal: number = 0;
 
   private currentHouseId = null;
   public currentHouse : House = null;
@@ -28,8 +27,8 @@ export class ViewDetailHouseComponent {
         this.currentHouse.timeLeft = new Date(+this.currentHouse.endDate - + new Date());
         this.currentHouse.createdDate = new Date(this.currentHouse.createdDate);
         this.currentHouse.endDate = new Date(this.currentHouse.endDate);
+        this.biddingVal = this.currentHouse.endPrice;
         this.houseManagementService.countDown(this.currentHouse, new Date(), this.currentHouse.endDate);
-        console.log(this.currentHouse);
       });
     });
   }
@@ -38,13 +37,14 @@ export class ViewDetailHouseComponent {
 
   public updateVal(num: number){
     this.biddingVal += num;
-    if(this.biddingVal <= this.currentVal) {
-      this.biddingVal = this.currentVal;
+    if(this.biddingVal <= this.currentHouse.endPrice ) {
+      this.biddingVal  = this.currentHouse.endPrice ;
     }
   }
 
   public bidNow(biddingVal: number){
-    this.currentVal = biddingVal;
+    console.log(biddingVal);
+    this.currentHouse.endPrice = biddingVal;
   }
 
 }

@@ -42,14 +42,14 @@ export class HouseManagementService extends APIService{
 	public countDown(house, start : Date, end : Date){
 		return Observable.interval(1000).subscribe(()=>{
 		  let t = (new Date(end.getTime() - start.getTime())).getTime();
-		  let milisecond = t % 1000;
-		  t = (t - milisecond) / 1000
-		  let second = t % 60 ;
-		  t = (t - second) / 60;
-		  let minute = t % 60;
-		  t = (t - minute) / 60;
-		  let hour = t % 24;
-		  t = (t - hour) / 24;
+		  let milisecond = t % 1000 === 0 ? 999 : t % 1000;
+		  t = Math.floor((t - milisecond) / 1000);
+		  let second = t % 60 === 0 ? 59 : t % 60;
+		  t = Math.floor((t - second) / 60);
+		  let minute = t % 60 === 0 ? 59 : t % 60;
+		  t = Math.floor((t - minute) / 60);
+		  let hour = t % 24 === 0 ? 23 : t % 24;
+		  t = Math.floor((t - hour) / 24);
 		  let day = t % 365;
 		  house.displayTimeLeft = {
 			day : day,
