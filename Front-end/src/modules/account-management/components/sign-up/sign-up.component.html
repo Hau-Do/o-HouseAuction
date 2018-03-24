@@ -1,1 +1,52 @@
-<!-- / -->
+<div class="row">
+    <div class="container">
+        <div class="sign-up-box col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="page-header">
+                        <h1 class="text-center">Register</h1>
+                    </div>
+                </div>
+            </div>
+            <h3>Account Information</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
+                    <span class="gap"></span>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+                    <span class="gap"></span>
+                </div>
+            </div>
+            <h3>Personal Information</h3>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Fullname" [(ngModel)]="fullname">
+                </div>
+            </div>
+            <span class="gap"></span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Address" [(ngModel)]="address">
+                </div>
+            </div>
+            <span class="gap"></span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <input type="text" class="form-control" placeholder="Wallet Address" [(ngModel)]="walletAddress">
+                </div>
+            </div>
+            <span class="gap"></span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <button class="btn btn-info" type="submit" (click)="signup()">SIGN UP</button>
+                    <span class="gap"></span>
+                    <p class="message">Already has account?
+                        <a [routerLink]="['/account/sign in']">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

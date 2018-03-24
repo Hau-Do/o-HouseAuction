@@ -7,6 +7,7 @@ import { MyCartComponent } from './components/my-cart/my-cart.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { OrderStatusComponent } from './components/check-out/order-status/order-status.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AuthGuard } from '../../_guards/auth.guard';
 
 export const ACCOUNT_MANAGEMENT_ROUTE: Routes = [
@@ -17,6 +18,10 @@ export const ACCOUNT_MANAGEMENT_ROUTE: Routes = [
     {
         path: 'signin',
         component: SignInComponent
+    },
+    {
+        path: 'signup',
+        component: SignUpComponent
     },
     {
         path: 'my-auctions',
@@ -46,5 +51,6 @@ export const ACCOUNT_MANAGEMENT_COMPONENT = [
     MyCartComponent,
     CheckOutComponent,
     SignInComponent,
+    SignUpComponent,
     OrderStatusComponent
 ]

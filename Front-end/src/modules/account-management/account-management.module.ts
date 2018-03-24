@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
@@ -19,13 +20,11 @@ import { CoreService } from '../../shared/services/core.service';
 @NgModule({
   imports: [
     RouterModule.forChild(ACCOUNT_MANAGEMENT_ROUTE),
+    CommonModule,
     SharedModule
   ],
   declarations: [
-    ACCOUNT_MANAGEMENT_COMPONENT,
-    OrderStatusComponent,
-    SignInComponent,
-    AddressInformationComponent
+    ACCOUNT_MANAGEMENT_COMPONENT
   ],
   providers : [
     AccountManagementService

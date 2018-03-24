@@ -13,6 +13,8 @@ import { CoreService } from '../../shared/services/core.service';
 
 export class NavBarComponent implements OnInit {
     
+    public isLogin = false;
+
     constructor(
         private router: Router,
         private core : CoreService
@@ -21,7 +23,9 @@ export class NavBarComponent implements OnInit {
     }
 
     ngOnInit() {
-
+        if(this.core.getUserData()){
+            this.isLogin = true;
+        }
     }
 
     logOut() {

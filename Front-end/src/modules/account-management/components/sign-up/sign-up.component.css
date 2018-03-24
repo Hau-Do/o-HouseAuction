@@ -1,0 +1,17 @@
+.sign-up-box{
+    -webkit-box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+    padding:30px;
+    background:white;
+    border-top: 10px solid #2980b9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top:50px;
+    margin-bottom:25px;
+}
+@media only screen and (max-width: 768px) {
+    .sign-up-box{
+        padding:15px;
+    }
+}

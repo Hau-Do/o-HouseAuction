@@ -9,7 +9,9 @@ import { CoreService } from "../../shared/services/core.service";
 @Injectable()
 export class AccountManagementService extends APIService {
 	private apiName = {
-		getAccounts: "account"
+		getAccounts: "account",
+		createAccount : "account",
+		createUserInfo : "user"
 	}
 	private returnUrl : string = "";
 
@@ -47,4 +49,12 @@ export class AccountManagementService extends APIService {
 		delete data.secret;
 		return this.callAPI("post", this.getApiEndpoint("http://localhost:8080/uaa/oauth/token?grant_type=$1&username=$2&password=$3", [data.grant_type, data.username, data.password]), null, headers, false, "URL_ENCODED");
 	}
+
+	signup(data){
+		return this.callAPI("post",  this.getApiEndpoint(this.apiName.createAccount), data, null, false);
+	}
+
+	// createUserInfo(data){
+	// 	return this.callAPI("post",);
+	// }
 }

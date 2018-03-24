@@ -37,3 +37,15 @@ a[href]:not([class]) {
 .flat{
 	border-radius:0;
 }
+.gap{
+	height:15px;
+	width:100%;
+	display:block;
+}
+.container-wrapper{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100%;
+	width:100%;
+}

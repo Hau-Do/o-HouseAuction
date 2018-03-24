@@ -6,13 +6,12 @@
         <input type="password" placeholder="password"/>
         <input type="text" placeholder="email address"/>
         <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
       </form>
       <form #f="ngForm" class="login-form" (ngSubmit)="signIn(f)">
         <input type="text" placeholder="username" name="username" [(ngModel)]="username" />
         <input type="password" placeholder="password" name="password" [(ngModel)]="password"/>
         <button type="submit">SIGN IN</button>
-        <p class="message">Not registered? <a href="#">Create an account</a></p>
+        <p class="message">Not registered? <a [routerLink]="['/account/signup']">Create an account</a></p>
       </form>
     </div>
   </div>

@@ -9,7 +9,7 @@
 			</button>
 		</div>
 		<div class="collapse navbar-collapse" id="mainNavbar">
-			<ul class="nav navbar-nav mr-auto navbar-right">
+			<ul class="nav navbar-nav mr-auto navbar-right" *ngIf="isLogin">
 				<li class="nav-item" [routerLinkActive]="['active']">
 					<a class="nav-link" [routerLink]="['./account/my-cart']">My Cart</a>
 				</li>
@@ -32,6 +32,14 @@
 					</ul>
 				</li>
 			</ul>
+			<ul class="nav navbar-nav mr-auto navbar-right" *ngIf="!isLogin">
+					<li class="nav-item" [routerLinkActive]="['active']">
+						<a class="nav-link" [routerLink]="['./account/signin']">Sign In</a>
+					</li>
+					<li class="nav-item" [routerLinkActive]="['active']">
+						<a class="nav-link" [routerLink]="['./account/signup']">Sign Up</a>
+					</li>
+				</ul>
 		</div>
 	</div>
 </nav>
