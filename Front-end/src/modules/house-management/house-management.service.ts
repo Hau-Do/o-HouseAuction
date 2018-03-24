@@ -11,7 +11,8 @@ import { CoreService } from "../../shared/services/core.service";
 export class HouseManagementService extends APIService{
 	private apiName = {
 		getHouses : "house?page=$1&size=$2",
-		getHouse : "house/$1"
+		getHouse : "house/$1",
+		updateHouse : "house"
 	}
 
 	constructor(protected http : Http, protected core : CoreService){
@@ -35,6 +36,15 @@ export class HouseManagementService extends APIService{
 			callback(res, null);
 		},
 		err => {
+			callback(null, err);
+		});
+	}
+
+	public updateHouse(data, callback){
+		let apiEndpoint = this.getApiEndpoint(this.apiName.updateHouse);
+		this.callAPI("PUT", apiEndpoint, data).subscribe(res =>{
+			callback(res, null);
+		}, err => {
 			callback(null, err);
 		});
 	}

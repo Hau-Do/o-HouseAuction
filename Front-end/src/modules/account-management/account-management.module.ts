@@ -33,9 +33,7 @@ import { CoreService } from '../../shared/services/core.service';
 export class AccountManagementModule { 
 
   constructor(private core : CoreService, private router: Router){
-    if(this.core.getUserData()){
-      this.router.navigate(['/']);
-    }
+
   }
 
 }

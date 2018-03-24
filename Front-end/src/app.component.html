@@ -1,9 +1,9 @@
-<navbar-component></navbar-component>
+<navbar-component [isLogin]="isLogin" (logout)="checkLogout($event)"></navbar-component>
 <!-- <main-menu-component></main-menu-component> -->
 <div class="container" style="position:relative">
-	<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>
-<loading-component [size] = "'68'" [color] = "'#212121'" ></loading-component>
+<loading-component [size]="'68'" [color]="'#212121'"></loading-component>
 <!-- <pre-footer-component></pre-footer-component> -->
 <!-- <div style="width: 100%; position: absolute; bottom: 0;">
     <footer-component></footer-component>

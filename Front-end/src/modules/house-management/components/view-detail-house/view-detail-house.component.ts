@@ -43,7 +43,6 @@ export class ViewDetailHouseComponent {
   }
 
   public bidNow(biddingVal: number){
-    console.log(biddingVal);
     this.currentHouse.endPrice = biddingVal;
   }
 

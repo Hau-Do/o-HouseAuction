@@ -51,6 +51,6 @@ export class ViewHousesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(){
-
+    this.houseList = null;
   }
 }
